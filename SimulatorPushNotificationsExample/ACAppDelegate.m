@@ -7,6 +7,9 @@
 //
 
 #import "ACAppDelegate.h"
+#import "ACMainViewController.h"
+
+#import "UIApplicationDelegate+SimulatorPushNotifications.h"
 
 @implementation ACAppDelegate
 
@@ -15,7 +18,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+	self.window.rootViewController = [[ACMainViewController alloc] initWithNibName:NSStringFromClass([ACMainViewController class]) bundle:nil];
     [self.window makeKeyAndVisible];
+
+#if TARGET_IPHONE_SIMULATOR
+	// optional: [self setPushNotificationPort:9930];
+	[self applicationStartListeningForPushNotifications:application];
+#endif
+	
     return YES;
 }
 
@@ -44,6 +54,22 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - push notifications
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+
+	NSLog(@"%@", userInfo);
+	
+	if ( application.applicationState == UIApplicationStateActive ) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Push notification received"
+														message:[userInfo description]
+													   delegate:self
+											  cancelButtonTitle:@"Got it!"
+											  otherButtonTitles:nil];
+		[alert show];
+	}
 }
 
 @end

@@ -21,6 +21,9 @@
 		515184E016CC71AC007E471F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
 		515184E816CC71AC007E471F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 515184E616CC71AC007E471F /* InfoPlist.strings */; };
 		515184EB16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184EA16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m */; };
+		515184FA16CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184F916CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.m */; };
+		5151850216CC753F007E471F /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151850016CC753F007E471F /* ACMainViewController.m */; };
+		5151850516CC788B007E471F /* ACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151850416CC788B007E471F /* ACMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		515184E716CC71AC007E471F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		515184E916CC71AC007E471F /* SimulatorPushNotificationsExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorPushNotificationsExampleTests.h; sourceTree = "<group>"; };
 		515184EA16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorPushNotificationsExampleTests.m; sourceTree = "<group>"; };
+		515184F816CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplicationDelegate+SimulatorPushNotifications.h"; sourceTree = "<group>"; };
+		515184F916CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplicationDelegate+SimulatorPushNotifications.m"; sourceTree = "<group>"; };
+		515184FF16CC753F007E471F /* ACMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainViewController.h; sourceTree = "<group>"; };
+		5151850016CC753F007E471F /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
+		5151850416CC788B007E471F /* ACMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACMainViewController.xib; sourceTree = "<group>"; };
+		5151850616CC79CF007E471F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 		515184B016CC71AC007E471F = {
 			isa = PBXGroup;
 			children = (
+				5151850616CC79CF007E471F /* README.md */,
+				515184F416CC71C5007E471F /* SimulatorPushNotifications */,
 				515184C516CC71AC007E471F /* SimulatorPushNotificationsExample */,
 				515184E316CC71AC007E471F /* SimulatorPushNotificationsExampleTests */,
 				515184BE16CC71AC007E471F /* Frameworks */,
@@ -114,6 +125,9 @@
 			children = (
 				515184CE16CC71AC007E471F /* ACAppDelegate.h */,
 				515184CF16CC71AC007E471F /* ACAppDelegate.m */,
+				515184FF16CC753F007E471F /* ACMainViewController.h */,
+				5151850016CC753F007E471F /* ACMainViewController.m */,
+				5151850416CC788B007E471F /* ACMainViewController.xib */,
 				515184C616CC71AC007E471F /* Supporting Files */,
 			);
 			path = SimulatorPushNotificationsExample;
@@ -150,6 +164,15 @@
 				515184E616CC71AC007E471F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		515184F416CC71C5007E471F /* SimulatorPushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				515184F816CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.h */,
+				515184F916CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.m */,
+			);
+			path = SimulatorPushNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +251,7 @@
 				515184D216CC71AC007E471F /* Default.png in Resources */,
 				515184D416CC71AC007E471F /* Default@2x.png in Resources */,
 				515184D616CC71AC007E471F /* Default-568h@2x.png in Resources */,
+				5151850516CC788B007E471F /* ACMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +288,8 @@
 			files = (
 				515184CC16CC71AC007E471F /* main.m in Sources */,
 				515184D016CC71AC007E471F /* ACAppDelegate.m in Sources */,
+				515184FA16CC7213007E471F /* UIApplicationDelegate+SimulatorPushNotifications.m in Sources */,
+				5151850216CC753F007E471F /* ACMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
