@@ -1,8 +1,8 @@
-* SimulatorPushNotifications
+# SimulatorPushNotifications
 
 This library let you fake push notifications on the iOS simulator.
 
-** Usage
+## Usage
 
 In your iOS project:
 
@@ -19,6 +19,6 @@ You can do this from the terminal by using netcat:
 
 	echo -n '{"message":"message"}' | nc -4u -w1 localhost 9930
 	
-** Note
+## Note
 
 Apple push messages are limited to 256 bytes content length.
