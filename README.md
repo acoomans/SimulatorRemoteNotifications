@@ -1,4 +1,4 @@
-# SimulatorPushNotifications
+# SimulatorRemoteNotification
 
 This library let you fake push notifications on the iOS simulator.
 
@@ -6,11 +6,11 @@ This library let you fake push notifications on the iOS simulator.
 
 In your iOS project:
 
-1. Add the _SimulatorPushNotifications_ directory into your project.
-2. Add `#import "UIApplicationDelegate+SimulatorPushNotifications.h"` to your application delegate.
-3. Add `[self applicationStartListeningForPushNotifications:application];` to _application:didFinishLaunchingWithOptions:_
+1. Add the _SimulatorRemoteNotification_ directory into your project.
+2. Add `#import "UIApplication+SimulatorRemoteNotification.h"` to your application delegate.
+3. Add `[application listenForRemoteNotification];` to _application:didFinishLaunchingWithOptions:_
 
-Optional: you can set the port by calling _setPushNotificationPort:_
+Optional: you can set the port by calling _setRemoteNotificationPort:_
 
 The default port number is 9930
 

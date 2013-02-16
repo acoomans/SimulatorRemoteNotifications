@@ -1,6 +1,6 @@
 //
 //  ACAppDelegate.m
-//  SimulatorPushNotificationsExample
+//  SimulatorRemoteNotificationExample
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
@@ -9,7 +9,7 @@
 #import "ACAppDelegate.h"
 #import "ACMainViewController.h"
 
-#import "UIApplicationDelegate+SimulatorPushNotifications.h"
+#import "UIApplication+SimulatorRemoteNotification.h"
 
 @implementation ACAppDelegate
 
@@ -22,8 +22,8 @@
     [self.window makeKeyAndVisible];
 
 #if TARGET_IPHONE_SIMULATOR
-	// optional: [self setPushNotificationPort:9930];
-	[self applicationStartListeningForPushNotifications:application];
+	// optional: [application setRemoteNotificationPort:9930];
+	[application listenForRemoteNotification];
 #endif
 	
     return YES;
@@ -63,7 +63,7 @@
 	NSLog(@"%@", userInfo);
 	
 	if ( application.applicationState == UIApplicationStateActive ) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Push notification received"
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remote notification received"
 														message:[userInfo description]
 													   delegate:self
 											  cancelButtonTitle:@"Got it!"

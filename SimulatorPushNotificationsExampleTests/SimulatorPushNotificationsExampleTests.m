@@ -1,14 +1,14 @@
 //
-//  SimulatorPushNotificationsExampleTests.m
-//  SimulatorPushNotificationsExampleTests
+//  SimulatorRemoteNotificationExampleTests.m
+//  SimulatorRemoteNotificationExampleTests
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import "SimulatorPushNotificationsExampleTests.h"
+#import "SimulatorRemoteNotificationExampleTests.h"
 
-@implementation SimulatorPushNotificationsExampleTests
+@implementation SimulatorRemoteNotificationExampleTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in SimulatorPushNotificationsExampleTests");
+    STFail(@"Unit tests are not implemented yet in SimulatorRemoteNotificationExampleTests");
 }
 
 @end

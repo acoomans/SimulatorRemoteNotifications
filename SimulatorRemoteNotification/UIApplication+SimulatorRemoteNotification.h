@@ -1,6 +1,6 @@
 //
-//  UIApplicationDelegate+SimulatorPushNotifications.h
-//  SimulatorPushNotifications
+//  UIApplication+SimulatorRemoteNotification.h
+//  SimulatorRemoteNotification
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
@@ -22,11 +22,11 @@
 #define BUFLEN 512
 #define PORT 9930
 
-@interface UIResponder (SimulatorPushNotifications)
+@interface UIApplication (SimulatorRemoteNotification)
 
-- (void)setPushNotificationPort:(int)port;
-- (int)pushNotificationPort;
+- (void)setRemoteNotificationPort:(int)port;
+- (int)remoteNotificationPort;
 
-- (void)applicationStartListeningForPushNotifications:(UIApplication*)application;
+- (void)listenForRemoteNotification;
 
 @end
