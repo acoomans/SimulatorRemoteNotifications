@@ -58,9 +58,13 @@
 
 #pragma mark - push notifications
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+	NSLog(@"Device token = \"%@\"", [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding]);
+}
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
-	NSLog(@"%@", userInfo);
+	NSLog(@"Remote notification = %@", userInfo);
 	
 	if ( application.applicationState == UIApplicationStateActive ) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remote notification received"

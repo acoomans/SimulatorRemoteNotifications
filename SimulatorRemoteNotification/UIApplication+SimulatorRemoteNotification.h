@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <unistd.h>
+#import <arpa/inet.h>
+#import <netinet/in.h>
+#import <stdio.h>
+#import <sys/types.h>
+#import <sys/socket.h>
+#import <unistd.h>
+#import <ifaddrs.h>
 
 /* Note on payload length:
  * udp max length is 65,507 bytes
@@ -28,5 +29,7 @@
 - (int)remoteNotificationPort;
 
 - (void)listenForRemoteNotification;
+
+- (NSString*)getIPAddress;
 
 @end

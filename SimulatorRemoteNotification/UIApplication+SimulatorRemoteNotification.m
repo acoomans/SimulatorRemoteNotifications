@@ -11,7 +11,6 @@
 
 static int __port = PORT;
 
-
 @implementation UIApplication (SimulatorRemoteNotification)
 
 - (void)listenForRemoteNotification {
@@ -40,7 +39,7 @@ static int __port = PORT;
 		if (recvfrom(__socket, __buffer, BUFLEN, 0, (struct sockaddr*)&__si_other, &slen)==-1) {
 			NSLog(@"SimulatorRemoteNotification: recvfrom error");
 		}
-		//NSLog(@"SimulatorRemoteNotification: received from %s:%d data = %s\n\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port), buf);
+		//NSLog(@"SimulatorRemoteNotification: received from %s:%d data = %s\n\n", inet_ntoa(__si_other.sin_addr), ntohs(__si_other.sin_port), __buffer);
 		
 		NSString *string = [NSString stringWithUTF8String:__buffer];
 		//NSLog(@"SimulatorRemoteNotification: received string = %@", string);
@@ -62,6 +61,12 @@ static int __port = PORT;
 		close(__socket);
 	});
     dispatch_resume(input_src);
+	
+	if ([self.delegate respondsToSelector:@selector(application:didRegisterForRemoteNotificationsWithDeviceToken:)]) {
+		NSString *deviceTokenString = [NSString stringWithFormat:@"simulator-remote-notification=%@:%d", [self getIPAddress], self.remoteNotificationPort];
+		[self.delegate application:self didRegisterForRemoteNotificationsWithDeviceToken:[deviceTokenString dataUsingEncoding:NSUTF8StringEncoding]];
+	}
+	
 }
 
 
@@ -73,6 +78,42 @@ static int __port = PORT;
 
 - (int)remoteNotificationPort {
 	return __port;
+}
+
+#pragma mark - ip address
+
+- (NSString *)getIPAddress {
+	
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+	
+	NSString *result = nil;
+	
+    // retrieve the current interfaces - returns 0 on success
+    if (!getifaddrs(&interfaces)) {
+		
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while(temp_addr != NULL) {
+            sa_family_t sa_type = temp_addr->ifa_addr->sa_family;
+            if(sa_type == AF_INET || sa_type == AF_INET6) {
+                NSString *addr = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                //NSString *name = [NSString stringWithUTF8String:temp_addr->ifa_name];
+				//NSLog(@"Interface \"%@\" addr %@", name, addr);
+				
+				if (!result ||
+					[result isEqualToString:@"0.0.0.0"] ||
+					([result isEqualToString:@"127.0.0.1"] && ![addr isEqualToString:@"0.0.0.0"])
+					) {
+					result = addr;
+				}
+					
+            }
+            temp_addr = temp_addr->ifa_next;
+        }
+        freeifaddrs(interfaces);
+    }
+    return result ? result : @"0.0.0.0";
 }
 
 @end
