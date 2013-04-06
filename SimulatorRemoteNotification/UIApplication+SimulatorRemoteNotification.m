@@ -67,6 +67,7 @@ static int __port = PORT;
 		[self.delegate application:self didRegisterForRemoteNotificationsWithDeviceToken:[deviceTokenString dataUsingEncoding:NSUTF8StringEncoding]];
 	}
 	
+    NSLog(@"SimulatorRemoteNotification: listening on %@:%d", [self getIPAddress], self.remoteNotificationPort);
 }
 
 
