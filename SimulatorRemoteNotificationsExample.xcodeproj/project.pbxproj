@@ -20,10 +20,10 @@
 		515184DF16CC71AC007E471F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184BF16CC71AC007E471F /* UIKit.framework */; };
 		515184E016CC71AC007E471F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
 		515184E816CC71AC007E471F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 515184E616CC71AC007E471F /* InfoPlist.strings */; };
-		515184EB16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184EA16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m */; };
+		515184EB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184EA16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.m */; };
 		5151850216CC753F007E471F /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151850016CC753F007E471F /* ACMainViewController.m */; };
 		5151850516CC788B007E471F /* ACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151850416CC788B007E471F /* ACMainViewController.xib */; };
-		517ADF4516CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 517ADF4416CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.m */; };
+		51741967173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,36 +32,36 @@
 			containerPortal = 515184B216CC71AC007E471F /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 515184BA16CC71AC007E471F;
-			remoteInfo = SimulatorPushNotificationsExample;
+			remoteInfo = SimulatorRemoteNotificationsExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		515184BB16CC71AC007E471F /* SimulatorPushNotificationsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorPushNotificationsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		515184BB16CC71AC007E471F /* SimulatorRemoteNotificationsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRemoteNotificationsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515184BF16CC71AC007E471F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		515184C116CC71AC007E471F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		515184C316CC71AC007E471F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		515184C716CC71AC007E471F /* SimulatorPushNotificationsExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorPushNotificationsExample-Info.plist"; sourceTree = "<group>"; };
+		515184C716CC71AC007E471F /* SimulatorRemoteNotificationsExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsExample-Info.plist"; sourceTree = "<group>"; };
 		515184C916CC71AC007E471F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		515184CB16CC71AC007E471F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		515184CD16CC71AC007E471F /* SimulatorPushNotificationsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorPushNotificationsExample-Prefix.pch"; sourceTree = "<group>"; };
+		515184CD16CC71AC007E471F /* SimulatorRemoteNotificationsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsExample-Prefix.pch"; sourceTree = "<group>"; };
 		515184CE16CC71AC007E471F /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
 		515184CF16CC71AC007E471F /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
 		515184D116CC71AC007E471F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		515184D316CC71AC007E471F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		515184D516CC71AC007E471F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		515184DC16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorPushNotificationsExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		515184DC16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRemoteNotificationsExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515184DD16CC71AC007E471F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		515184E516CC71AC007E471F /* SimulatorPushNotificationsExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorPushNotificationsExampleTests-Info.plist"; sourceTree = "<group>"; };
+		515184E516CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsExampleTests-Info.plist"; sourceTree = "<group>"; };
 		515184E716CC71AC007E471F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		515184E916CC71AC007E471F /* SimulatorPushNotificationsExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorPushNotificationsExampleTests.h; sourceTree = "<group>"; };
-		515184EA16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorPushNotificationsExampleTests.m; sourceTree = "<group>"; };
+		515184E916CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorRemoteNotificationsExampleTests.h; sourceTree = "<group>"; };
+		515184EA16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorRemoteNotificationsExampleTests.m; sourceTree = "<group>"; };
 		515184FF16CC753F007E471F /* ACMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainViewController.h; sourceTree = "<group>"; };
 		5151850016CC753F007E471F /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
 		5151850416CC788B007E471F /* ACMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACMainViewController.xib; sourceTree = "<group>"; };
 		5151850616CC79CF007E471F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		517ADF4316CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SimulatorRemoteNotification.h"; sourceTree = "<group>"; };
-		517ADF4416CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SimulatorRemoteNotification.m"; sourceTree = "<group>"; };
+		51741965173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SimulatorRemoteNotifications.h"; sourceTree = "<group>"; };
+		51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SimulatorRemoteNotifications.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				5151850616CC79CF007E471F /* README.md */,
-				517ADF4216CF6D9D00629D1B /* SimulatorRemoteNotification */,
-				515184C516CC71AC007E471F /* SimulatorPushNotificationsExample */,
-				515184E316CC71AC007E471F /* SimulatorPushNotificationsExampleTests */,
+				51741964173A167E0073FF2B /* SimulatorRemoteNotifications */,
+				515184C516CC71AC007E471F /* SimulatorRemoteNotificationsExample */,
+				515184E316CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */,
 				515184BE16CC71AC007E471F /* Frameworks */,
 				515184BC16CC71AC007E471F /* Products */,
 			);
@@ -103,8 +103,8 @@
 		515184BC16CC71AC007E471F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				515184BB16CC71AC007E471F /* SimulatorPushNotificationsExample.app */,
-				515184DC16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.octest */,
+				515184BB16CC71AC007E471F /* SimulatorRemoteNotificationsExample.app */,
+				515184DC16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		515184C516CC71AC007E471F /* SimulatorPushNotificationsExample */ = {
+		515184C516CC71AC007E471F /* SimulatorRemoteNotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
 				515184CE16CC71AC007E471F /* ACAppDelegate.h */,
@@ -130,16 +130,16 @@
 				5151850416CC788B007E471F /* ACMainViewController.xib */,
 				515184C616CC71AC007E471F /* Supporting Files */,
 			);
-			path = SimulatorPushNotificationsExample;
+			path = SimulatorRemoteNotificationsExample;
 			sourceTree = "<group>";
 		};
 		515184C616CC71AC007E471F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				515184C716CC71AC007E471F /* SimulatorPushNotificationsExample-Info.plist */,
+				515184C716CC71AC007E471F /* SimulatorRemoteNotificationsExample-Info.plist */,
 				515184C816CC71AC007E471F /* InfoPlist.strings */,
 				515184CB16CC71AC007E471F /* main.m */,
-				515184CD16CC71AC007E471F /* SimulatorPushNotificationsExample-Prefix.pch */,
+				515184CD16CC71AC007E471F /* SimulatorRemoteNotificationsExample-Prefix.pch */,
 				515184D116CC71AC007E471F /* Default.png */,
 				515184D316CC71AC007E471F /* Default@2x.png */,
 				515184D516CC71AC007E471F /* Default-568h@2x.png */,
@@ -147,40 +147,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		515184E316CC71AC007E471F /* SimulatorPushNotificationsExampleTests */ = {
+		515184E316CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				515184E916CC71AC007E471F /* SimulatorPushNotificationsExampleTests.h */,
-				515184EA16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m */,
+				515184E916CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.h */,
+				515184EA16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.m */,
 				515184E416CC71AC007E471F /* Supporting Files */,
 			);
-			path = SimulatorPushNotificationsExampleTests;
+			path = SimulatorRemoteNotificationsExampleTests;
 			sourceTree = "<group>";
 		};
 		515184E416CC71AC007E471F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				515184E516CC71AC007E471F /* SimulatorPushNotificationsExampleTests-Info.plist */,
+				515184E516CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests-Info.plist */,
 				515184E616CC71AC007E471F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		517ADF4216CF6D9D00629D1B /* SimulatorRemoteNotification */ = {
+		51741964173A167E0073FF2B /* SimulatorRemoteNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				517ADF4316CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.h */,
-				517ADF4416CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.m */,
+				51741965173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.h */,
+				51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */,
 			);
-			path = SimulatorRemoteNotification;
+			path = SimulatorRemoteNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		515184BA16CC71AC007E471F /* SimulatorPushNotificationsExample */ = {
+		515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 515184EE16CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorPushNotificationsExample" */;
+			buildConfigurationList = 515184EE16CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsExample" */;
 			buildPhases = (
 				515184B716CC71AC007E471F /* Sources */,
 				515184B816CC71AC007E471F /* Frameworks */,
@@ -190,14 +190,14 @@
 			);
 			dependencies = (
 			);
-			name = SimulatorPushNotificationsExample;
-			productName = SimulatorPushNotificationsExample;
-			productReference = 515184BB16CC71AC007E471F /* SimulatorPushNotificationsExample.app */;
+			name = SimulatorRemoteNotificationsExample;
+			productName = SimulatorRemoteNotificationsExample;
+			productReference = 515184BB16CC71AC007E471F /* SimulatorRemoteNotificationsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		515184DB16CC71AC007E471F /* SimulatorPushNotificationsExampleTests */ = {
+		515184DB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 515184F116CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorPushNotificationsExampleTests" */;
+			buildConfigurationList = 515184F116CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsExampleTests" */;
 			buildPhases = (
 				515184D716CC71AC007E471F /* Sources */,
 				515184D816CC71AC007E471F /* Frameworks */,
@@ -209,9 +209,9 @@
 			dependencies = (
 				515184E216CC71AC007E471F /* PBXTargetDependency */,
 			);
-			name = SimulatorPushNotificationsExampleTests;
-			productName = SimulatorPushNotificationsExampleTests;
-			productReference = 515184DC16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.octest */;
+			name = SimulatorRemoteNotificationsExampleTests;
+			productName = SimulatorRemoteNotificationsExampleTests;
+			productReference = 515184DC16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = acoomans;
 			};
-			buildConfigurationList = 515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorPushNotificationsExample" */;
+			buildConfigurationList = 515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotificationsExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,8 +236,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				515184BA16CC71AC007E471F /* SimulatorPushNotificationsExample */,
-				515184DB16CC71AC007E471F /* SimulatorPushNotificationsExampleTests */,
+				515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */,
+				515184DB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 				515184CC16CC71AC007E471F /* main.m in Sources */,
 				515184D016CC71AC007E471F /* ACAppDelegate.m in Sources */,
 				5151850216CC753F007E471F /* ACMainViewController.m in Sources */,
-				517ADF4516CF6D9D00629D1B /* UIApplication+SimulatorRemoteNotification.m in Sources */,
+				51741967173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				515184EB16CC71AC007E471F /* SimulatorPushNotificationsExampleTests.m in Sources */,
+				515184EB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +306,7 @@
 /* Begin PBXTargetDependency section */
 		515184E216CC71AC007E471F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 515184BA16CC71AC007E471F /* SimulatorPushNotificationsExample */;
+			target = 515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */;
 			targetProxy = 515184E116CC71AC007E471F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -387,8 +387,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Prefix.pch";
-				INFOPLIST_FILE = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Info.plist";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Prefix.pch";
+				INFOPLIST_FILE = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,8 +398,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Prefix.pch";
-				INFOPLIST_FILE = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Info.plist";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Prefix.pch";
+				INFOPLIST_FILE = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,14 +408,14 @@
 		515184F216CC71AC007E471F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorPushNotificationsExample.app/SimulatorPushNotificationsExample";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsExample.app/SimulatorRemoteNotificationsExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Prefix.pch";
-				INFOPLIST_FILE = "SimulatorPushNotificationsExampleTests/SimulatorPushNotificationsExampleTests-Info.plist";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Prefix.pch";
+				INFOPLIST_FILE = "SimulatorRemoteNotificationsExampleTests/SimulatorRemoteNotificationsExampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -425,14 +425,14 @@
 		515184F316CC71AC007E471F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorPushNotificationsExample.app/SimulatorPushNotificationsExample";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsExample.app/SimulatorRemoteNotificationsExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorPushNotificationsExample/SimulatorPushNotificationsExample-Prefix.pch";
-				INFOPLIST_FILE = "SimulatorPushNotificationsExampleTests/SimulatorPushNotificationsExampleTests-Info.plist";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsExample/SimulatorRemoteNotificationsExample-Prefix.pch";
+				INFOPLIST_FILE = "SimulatorRemoteNotificationsExampleTests/SimulatorRemoteNotificationsExampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -442,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorPushNotificationsExample" */ = {
+		515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotificationsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515184EC16CC71AC007E471F /* Debug */,
@@ -451,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		515184EE16CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorPushNotificationsExample" */ = {
+		515184EE16CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515184EF16CC71AC007E471F /* Debug */,
@@ -460,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		515184F116CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorPushNotificationsExampleTests" */ = {
+		515184F116CC71AC007E471F /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515184F216CC71AC007E471F /* Debug */,

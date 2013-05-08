@@ -1,6 +1,6 @@
 //
-//  UIApplication+SimulatorRemoteNotification.h
-//  SimulatorRemoteNotification
+//  UIApplication+SimulatorRemoteNotifications.h
+//  SimulatorRemoteNotifications
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.

@@ -1,12 +1,12 @@
 //
-//  UIApplication+SimulatorRemoteNotification.m
-//  SimulatorRemoteNotification
+//  UIApplication+SimulatorRemoteNotifications.m
+//  SimulatorRemoteNotifications
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import "UIApplication+SimulatorRemoteNotification.h"
+#import "UIApplication+SimulatorRemoteNotifications.h"
 
 
 static int __port = PORT;

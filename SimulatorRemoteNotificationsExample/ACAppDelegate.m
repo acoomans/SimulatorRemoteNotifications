@@ -1,6 +1,6 @@
 //
 //  ACAppDelegate.m
-//  SimulatorRemoteNotificationExample
+//  SimulatorRemoteNotificationsExample
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
@@ -9,7 +9,7 @@
 #import "ACAppDelegate.h"
 #import "ACMainViewController.h"
 
-#import "UIApplication+SimulatorRemoteNotification.h"
+#import "UIApplication+SimulatorRemoteNotifications.h"
 
 @implementation ACAppDelegate
 
@@ -56,7 +56,7 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - push notifications
+#pragma mark - remote notifications
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	NSLog(@"Device token = \"%@\"", [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding]);

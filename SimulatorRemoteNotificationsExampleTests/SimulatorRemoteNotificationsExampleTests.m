@@ -1,14 +1,14 @@
 //
-//  SimulatorRemoteNotificationExampleTests.m
-//  SimulatorRemoteNotificationExampleTests
+//  SimulatorRemoteNotificationsExampleTests.m
+//  SimulatorRemoteNotificationsExampleTests
 //
 //  Created by Arnaud Coomans on 13/02/13.
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import "SimulatorRemoteNotificationExampleTests.h"
+#import "SimulatorRemoteNotificationsExampleTests.h"
 
-@implementation SimulatorRemoteNotificationExampleTests
+@implementation SimulatorRemoteNotificationsExampleTests
 
 - (void)setUp
 {
