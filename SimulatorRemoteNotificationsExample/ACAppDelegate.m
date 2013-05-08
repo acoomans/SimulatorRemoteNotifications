@@ -9,7 +9,10 @@
 #import "ACAppDelegate.h"
 #import "ACMainViewController.h"
 
+#if DEBUG
 #import "UIApplication+SimulatorRemoteNotifications.h"
+#endif
+
 
 @implementation ACAppDelegate
 
@@ -21,7 +24,7 @@
 	self.window.rootViewController = [[ACMainViewController alloc] initWithNibName:NSStringFromClass([ACMainViewController class]) bundle:nil];
     [self.window makeKeyAndVisible];
 
-#if TARGET_IPHONE_SIMULATOR
+#if DEBUG
 	// optional: [application setRemoteNotificationPort:9930];
 	[application listenForRemoteNotifications];
 #endif
