@@ -23,7 +23,7 @@
 
 #if TARGET_IPHONE_SIMULATOR
 	// optional: [application setRemoteNotificationPort:9930];
-	[application listenForRemoteNotification];
+	[application listenForRemoteNotifications];
 #endif
 	
     return YES;

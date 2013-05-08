@@ -11,9 +11,9 @@
 
 static int __port = PORT;
 
-@implementation UIApplication (SimulatorRemoteNotification)
+@implementation UIApplication (SimulatorRemoteNotifications)
 
-- (void)listenForRemoteNotification {
+- (void)listenForRemoteNotifications {
 	
 	static struct sockaddr_in __si_me, __si_other;
 	static int __socket;
@@ -63,21 +63,21 @@ static int __port = PORT;
     dispatch_resume(input_src);
 	
 	if ([self.delegate respondsToSelector:@selector(application:didRegisterForRemoteNotificationsWithDeviceToken:)]) {
-		NSString *deviceTokenString = [NSString stringWithFormat:@"simulator-remote-notification=%@:%d", [self getIPAddress], self.remoteNotificationPort];
+		NSString *deviceTokenString = [NSString stringWithFormat:@"simulator-remote-notification=%@:%d", [self getIPAddress], self.remoteNotificationsPort];
 		[self.delegate application:self didRegisterForRemoteNotificationsWithDeviceToken:[deviceTokenString dataUsingEncoding:NSUTF8StringEncoding]];
 	}
 	
-    NSLog(@"SimulatorRemoteNotification: listening on %@:%d", [self getIPAddress], self.remoteNotificationPort);
+    NSLog(@"SimulatorRemoteNotification: listening on %@:%d", [self getIPAddress], self.remoteNotificationsPort);
 }
 
 
 #pragma mark - port configuration
 
-- (void)setRemoteNotificationPort:(int)port {
+- (void)setRemoteNotificationsPort:(int)port {
 	__port = port;
 }
 
-- (int)remoteNotificationPort {
+- (int)remoteNotificationsPort {
 	return __port;
 }
 

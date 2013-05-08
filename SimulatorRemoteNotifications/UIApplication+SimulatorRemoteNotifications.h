@@ -23,12 +23,12 @@
 #define BUFLEN 512
 #define PORT 9930
 
-@interface UIApplication (SimulatorRemoteNotification)
+@interface UIApplication (SimulatorRemoteNotifications)
 
-- (void)setRemoteNotificationPort:(int)port;
-- (int)remoteNotificationPort;
+- (void)setRemoteNotificationsPort:(int)port;
+- (int)remoteNotificationsPort;
 
-- (void)listenForRemoteNotification;
+- (void)listenForRemoteNotifications;
 
 - (NSString*)getIPAddress;
 
