@@ -36,12 +36,14 @@ static int __port = PORT;
 	input_src = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, __socket, 0, dispatch_get_main_queue());
 	dispatch_source_set_event_handler(input_src,  ^{
 		socklen_t slen=sizeof(__si_other);
-		if (recvfrom(__socket, __buffer, BUFLEN, 0, (struct sockaddr*)&__si_other, &slen)==-1) {
+        ssize_t size = 0;
+		if ((size = recvfrom(__socket, __buffer, BUFLEN, 0, (struct sockaddr*)&__si_other, &slen))==-1) {
 			NSLog(@"SimulatorRemoteNotification: recvfrom error");
 		}
 		//NSLog(@"SimulatorRemoteNotification: received from %s:%d data = %s\n\n", inet_ntoa(__si_other.sin_addr), ntohs(__si_other.sin_port), __buffer);
-		
+		__buffer[size] = NULL;
 		NSString *string = [NSString stringWithUTF8String:__buffer];
+        
 		//NSLog(@"SimulatorRemoteNotification: received string = %@", string);
 		
 		NSError *error = nil;
