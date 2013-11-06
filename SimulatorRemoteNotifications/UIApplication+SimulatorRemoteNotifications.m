@@ -53,7 +53,10 @@ static int __port = PORT;
 		} else if (![dict isKindOfClass:[NSDictionary class]]) {
 			NSLog(@"SimulatorRemoteNotification: message error (not a dictionary)");
 		} else {
-			if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:)]) {
+            if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)]) {
+                [self.delegate application:self didReceiveRemoteNotification:dict fetchCompletionHandler:^(UIBackgroundFetchResult result) {}];
+			}
+			else if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:)]) {
 					[self.delegate application:self didReceiveRemoteNotification:dict];
 			}
 		}
