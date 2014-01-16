@@ -6,6 +6,22 @@ The library extends _UIApplication_ by embedding a mini server that listen for u
 
 Note that SimulatorRemoteNotifications does not send notification through Apple's Push Service.
 
+[![Build Status](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/SimulatorRemoteNotifications/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASimulatorRemoteNotifications%2A)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/p/SimulatorRemoteNotifications/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASimulatorRemoteNotifications%2A)
+
+
+## Install with CocoaPods
+
+You can either clone this repository or use [CocoaPods](http://cocoapods.org) to add SimulatorRemoteNotifications to your project.
+
+Add a pod entry for Parallax to your Podfile:
+
+	pod 'SimulatorRemoteNotifications', '~> 0.0.2'
+
+Install the pod(s) by running:
+
+	pod install
 
 ## Usage
 
