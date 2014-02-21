@@ -71,7 +71,7 @@
 	
 	if ( application.applicationState == UIApplicationStateActive ) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remote notification received"
-														message:[userInfo description]
+														message:[NSString stringWithFormat:@"application:didReceiveRemoteNotification:\n%@", [userInfo description]]
 													   delegate:self
 											  cancelButtonTitle:@"Got it!"
 											  otherButtonTitles:nil];
