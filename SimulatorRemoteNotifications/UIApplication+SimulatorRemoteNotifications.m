@@ -57,11 +57,10 @@ static int __port = PORT;
                 if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)]) {
                     [self.delegate application:self didReceiveRemoteNotification:dict fetchCompletionHandler:^(UIBackgroundFetchResult result) {}];
                 }
-            #else
-                if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:)]) {
-                    [self.delegate application:self didReceiveRemoteNotification:dict];
-                }
             #endif
+            if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:)]) {
+                [self.delegate application:self didReceiveRemoteNotification:dict];
+            }
 		}
 	});
     dispatch_source_set_cancel_handler(input_src,  ^{
