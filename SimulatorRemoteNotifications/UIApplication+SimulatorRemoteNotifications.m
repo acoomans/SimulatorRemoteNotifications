@@ -56,7 +56,7 @@ static int __port = PORT;
             #ifdef __IPHONE_7_0
                 if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)]) {
                     [self.delegate application:self didReceiveRemoteNotification:dict fetchCompletionHandler:^(UIBackgroundFetchResult result) {}];
-                }
+                } else
             #endif
             if ([self.delegate respondsToSelector:@selector(application:didReceiveRemoteNotification:)]) {
                 [self.delegate application:self didReceiveRemoteNotification:dict];
