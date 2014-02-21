@@ -8,6 +8,24 @@
 
 #import "ACSimulatorRemoteNotificationsService.h"
 
+#import <arpa/inet.h>
+#import <netinet/in.h>
+#import <stdio.h>
+#import <sys/types.h>
+#import <sys/socket.h>
+#import <unistd.h>
+#import <ifaddrs.h>
+#include <string.h>
+
+/* Note on payload length:
+ * udp max length is 65,507 bytes
+ * apns max length is 256 bytes
+ */
+static const NSInteger SimulatorRemoteNotificationsServiceBufferLength = 512;
+static const NSInteger SimulatorRemoteNotificationsServiceDefaultPort = 9930;
+static NSString * const SimulatorRemoteNotificationsServiceDefaultHost = @"localhost";
+
+
 @implementation ACSimulatorRemoteNotificationsService
 
 + (instancetype)sharedService {
@@ -15,8 +33,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedSimulatorRemoteNotificationsService = [[super alloc] init];
-        _sharedSimulatorRemoteNotificationsService.remoteNotificationsPort = PORT;
-        _sharedSimulatorRemoteNotificationsService.remoteNotificationsHost = SRV_IP;
+        _sharedSimulatorRemoteNotificationsService.remoteNotificationsPort = SimulatorRemoteNotificationsServiceDefaultPort;
+        _sharedSimulatorRemoteNotificationsService.remoteNotificationsHost = SimulatorRemoteNotificationsServiceDefaultHost;
     });
     
     return _sharedSimulatorRemoteNotificationsService;
@@ -26,7 +44,7 @@
     
     struct sockaddr_in si_other;
     int s;
-    char buf[BUFLEN];
+    char buf[SimulatorRemoteNotificationsServiceBufferLength];
     
     if ((s=socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP))==-1) {
 		NSLog(@"ACSimulatorRemoteNotificationsService: socket error");
@@ -42,9 +60,9 @@
     
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:payload options:NSJSONWritingPrettyPrinted error:&error];
-    strncpy(buf, [data bytes], BUFLEN);
+    strncpy(buf, [data bytes], SimulatorRemoteNotificationsServiceBufferLength);
     
-    if (sendto(s, buf, BUFLEN, 0, (struct sockaddr*)&si_other, sizeof(si_other))==-1) {
+    if (sendto(s, buf, SimulatorRemoteNotificationsServiceBufferLength, 0, (struct sockaddr*)&si_other, sizeof(si_other))==-1) {
         NSLog(@"ACSimulatorRemoteNotificationsService: sendto error");
     }
 

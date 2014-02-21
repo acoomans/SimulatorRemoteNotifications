@@ -8,8 +8,23 @@
 
 #import "UIApplication+SimulatorRemoteNotifications.h"
 
+#import <arpa/inet.h>
+#import <netinet/in.h>
+#import <stdio.h>
+#import <sys/types.h>
+#import <sys/socket.h>
+#import <unistd.h>
+#import <ifaddrs.h>
 
-static int __port = PORT;
+/* Note on payload length:
+ * udp max length is 65,507 bytes
+ * apns max length is 256 bytes
+ */
+static const NSInteger SimulatorRemoteNotificationsBufferLength = 512;
+static const NSInteger SimulatorRemoteNotificationsDefaultPort = 9930;
+
+
+static int __port = SimulatorRemoteNotificationsDefaultPort;
 
 @implementation UIApplication (SimulatorRemoteNotifications)
 
@@ -17,7 +32,7 @@ static int __port = PORT;
 	
 	static struct sockaddr_in __si_me, __si_other;
 	static int __socket;
-	static char __buffer[BUFLEN];
+	static char __buffer[SimulatorRemoteNotificationsBufferLength];
 	static dispatch_source_t input_src;
 	
 	if ((__socket=socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP))==-1) {
@@ -37,7 +52,7 @@ static int __port = PORT;
 	dispatch_source_set_event_handler(input_src,  ^{
 		socklen_t slen=sizeof(__si_other);
         ssize_t size = 0;
-		if ((size = recvfrom(__socket, __buffer, BUFLEN, 0, (struct sockaddr*)&__si_other, &slen))==-1) {
+		if ((size = recvfrom(__socket, __buffer, SimulatorRemoteNotificationsBufferLength, 0, (struct sockaddr*)&__si_other, &slen))==-1) {
 			NSLog(@"SimulatorRemoteNotification: recvfrom error");
 		}
 		//NSLog(@"SimulatorRemoteNotification: received from %s:%d data = %s\n\n", inet_ntoa(__si_other.sin_addr), ntohs(__si_other.sin_port), __buffer);

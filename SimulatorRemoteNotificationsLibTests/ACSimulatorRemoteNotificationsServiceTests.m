@@ -17,7 +17,7 @@
 
 - (void) testSend {
     [[ACSimulatorRemoteNotificationsService sharedService] send:@{
-                                                  @"hello": @"bye"
+                                                  @"message": @"message"
                                                   }];
 }
 

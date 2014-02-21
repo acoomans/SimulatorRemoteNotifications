@@ -8,18 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <arpa/inet.h>
-#import <netinet/in.h>
-#import <stdio.h>
-#import <sys/types.h>
-#import <sys/socket.h>
-#import <unistd.h>
-#import <ifaddrs.h>
-#include <string.h>
-
-#define BUFLEN 512
-#define PORT 9930
-#define SRV_IP @"localhost"
 
 @interface ACSimulatorRemoteNotificationsService : NSObject
 
