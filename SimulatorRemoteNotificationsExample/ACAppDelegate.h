@@ -12,4 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// used by unit tests
+@property (nonatomic, assign) BOOL didRegister;
+@property (nonatomic, assign) BOOL didReceive;
+
 @end

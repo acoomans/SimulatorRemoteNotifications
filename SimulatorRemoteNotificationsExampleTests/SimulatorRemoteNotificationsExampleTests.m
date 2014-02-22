@@ -7,26 +7,30 @@
 //
 
 #import "SimulatorRemoteNotificationsExampleTests.h"
+#import "ACSimulatorRemoteNotificationsService.h"
+#import "UIApplication+SimulatorRemoteNotifications.h"
+#import "ACAppDelegate.h"
+
 
 @implementation SimulatorRemoteNotificationsExampleTests
 
-- (void)setUp
-{
-    [super setUp];
+- (void)testExample {
     
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
+    ACAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in SimulatorRemoteNotificationExampleTests");
+    [[ACSimulatorRemoteNotificationsService sharedService] send:@{@"message": @"message"}];
+    
+    NSDate *date = [NSDate date];
+	while (YES) {
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+								 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1.0]];
+		if ([[NSDate date] timeIntervalSinceDate:date] > 1) {
+			break;
+		}
+	}
+    
+    STAssertTrue(appDelegate.didRegister, nil);
+    STAssertTrue(appDelegate.didReceive, nil);
 }
 
 @end

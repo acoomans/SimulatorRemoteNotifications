@@ -32,6 +32,7 @@
 		517C98C118B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C98BF18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m */; };
 		517C98C518B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C98C418B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m */; };
 		517C98C718B80C5600FC4694 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188299A182AD38F00EF0ADB /* XCTest.framework */; };
+		517C98F818B8282B00FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
 		5188297B182AD38E00EF0ADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
 		5188297C182AD38E00EF0ADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C316CC71AC007E471F /* CoreGraphics.framework */; };
 		5188297D182AD38E00EF0ADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184BF16CC71AC007E471F /* UIKit.framework */; };
@@ -139,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				517C98F818B8282B00FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */,
 				515184DE16CC71AC007E471F /* SenTestingKit.framework in Frameworks */,
 				515184DF16CC71AC007E471F /* UIKit.framework in Frameworks */,
 				515184E016CC71AC007E471F /* Foundation.framework in Frameworks */,
@@ -1104,6 +1106,7 @@
 				517C98B918B801C800FC4694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		517C98BD18B801C800FC4694 /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsLibTests" */ = {
 			isa = XCConfigurationList;
@@ -1112,6 +1115,7 @@
 				517C98BB18B801C800FC4694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		518829AC182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExample" */ = {
 			isa = XCConfigurationList;

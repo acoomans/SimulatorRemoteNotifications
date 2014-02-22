@@ -9,5 +9,4 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 @interface SimulatorRemoteNotificationsExampleTests : SenTestCase
-
 @end
