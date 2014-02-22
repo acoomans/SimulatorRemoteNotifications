@@ -23,7 +23,7 @@
  */
 static const NSInteger SimulatorRemoteNotificationsServiceBufferLength = 512;
 static const NSInteger SimulatorRemoteNotificationsServiceDefaultPort = 9930;
-static NSString * const SimulatorRemoteNotificationsServiceDefaultHost = @"localhost";
+static NSString * const SimulatorRemoteNotificationsServiceDefaultHost = @"127.0.0.1";
 
 
 @implementation ACSimulatorRemoteNotificationsService
@@ -54,15 +54,20 @@ static NSString * const SimulatorRemoteNotificationsServiceDefaultHost = @"local
     si_other.sin_family = AF_INET;
     si_other.sin_port = htons(self.remoteNotificationsPort);
     
-    if (inet_aton([self.remoteNotificationsHost cStringUsingEncoding:NSUTF8StringEncoding], &si_other.sin_addr)==0) {
+    const char *host = [self.remoteNotificationsHost cStringUsingEncoding:NSUTF8StringEncoding];
+    if (inet_aton(host, &si_other.sin_addr)==0) {
         NSLog(@"ACSimulatorRemoteNotificationsService: inet_aton error");
     }
     
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:payload options:NSJSONWritingPrettyPrinted error:&error];
-    strncpy(buf, [data bytes], SimulatorRemoteNotificationsServiceBufferLength);
     
-    if (sendto(s, buf, SimulatorRemoteNotificationsServiceBufferLength, 0, (struct sockaddr*)&si_other, sizeof(si_other))==-1) {
+    
+    // TODO: clean (remove buffer?)
+    memset(buf, '\0', SimulatorRemoteNotificationsServiceBufferLength);
+    strncpy(buf, [data bytes], MIN(data.length, SimulatorRemoteNotificationsServiceBufferLength));
+    
+    if (sendto(s, buf, strnlen(buf, SimulatorRemoteNotificationsServiceBufferLength), 0, (struct sockaddr*)&si_other, sizeof(si_other))==-1) {
         NSLog(@"ACSimulatorRemoteNotificationsService: sendto error");
     }
 

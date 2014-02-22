@@ -50,7 +50,7 @@ static int __port = SimulatorRemoteNotificationsDefaultPort;
 	
 	input_src = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, __socket, 0, dispatch_get_main_queue());
 	dispatch_source_set_event_handler(input_src,  ^{
-		socklen_t slen=sizeof(__si_other);
+		socklen_t slen = sizeof(__si_other);
         ssize_t size = 0;
 		if ((size = recvfrom(__socket, __buffer, SimulatorRemoteNotificationsBufferLength, 0, (struct sockaddr*)&__si_other, &slen))==-1) {
 			NSLog(@"SimulatorRemoteNotification: recvfrom error");
