@@ -27,10 +27,8 @@
 		517C989B18B801C800FC4694 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989A18B801C800FC4694 /* Cocoa.framework */; };
 		517C98AC18B801C800FC4694 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989A18B801C800FC4694 /* Cocoa.framework */; };
 		517C98AF18B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
-		517C98B518B801C800FC4694 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 517C98B318B801C800FC4694 /* InfoPlist.strings */; };
 		517C98C018B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h in Headers */ = {isa = PBXBuildFile; fileRef = 517C98BE18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h */; };
 		517C98C118B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C98BF18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m */; };
-		517C98C518B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C98C418B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m */; };
 		517C98C718B80C5600FC4694 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188299A182AD38F00EF0ADB /* XCTest.framework */; };
 		517C98F818B8282B00FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
 		5188297B182AD38E00EF0ADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
@@ -107,11 +105,8 @@
 		517C989F18B801C800FC4694 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		517C98A218B801C800FC4694 /* SimulatorRemoteNotificationsLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsLib-Prefix.pch"; sourceTree = "<group>"; };
 		517C98AA18B801C800FC4694 /* SimulatorRemoteNotificationsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRemoteNotificationsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		517C98B218B801C800FC4694 /* SimulatorRemoteNotificationsLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsLibTests-Info.plist"; sourceTree = "<group>"; };
-		517C98B418B801C800FC4694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		517C98BE18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSimulatorRemoteNotificationsService.h; sourceTree = "<group>"; };
 		517C98BF18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSimulatorRemoteNotificationsService.m; sourceTree = "<group>"; };
-		517C98C418B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSimulatorRemoteNotificationsServiceTests.m; sourceTree = "<group>"; };
 		5188297A182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRemoteNotificationsBackgroundExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51882980182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsBackgroundExample-Info.plist"; sourceTree = "<group>"; };
 		51882982182AD38E00EF0ADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -202,7 +197,6 @@
 				5188297E182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */,
 				51EB436618B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */,
 				517C98A018B801C800FC4694 /* SimulatorRemoteNotificationsLib */,
-				517C98B018B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */,
 				515184BE16CC71AC007E471F /* Frameworks */,
 				515184BC16CC71AC007E471F /* Products */,
 			);
@@ -314,24 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				517C98A218B801C800FC4694 /* SimulatorRemoteNotificationsLib-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		517C98B018B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */ = {
-			isa = PBXGroup;
-			children = (
-				517C98C418B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m */,
-				517C98B118B801C800FC4694 /* Supporting Files */,
-			);
-			path = SimulatorRemoteNotificationsLibTests;
-			sourceTree = "<group>";
-		};
-		517C98B118B801C800FC4694 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				517C98B218B801C800FC4694 /* SimulatorRemoteNotificationsLibTests-Info.plist */,
-				517C98B318B801C800FC4694 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -563,7 +539,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C98B518B801C800FC4694 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +609,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C98C518B80AA600FC4694 /* ACSimulatorRemoteNotificationsServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,14 +664,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				515184E716CC71AC007E471F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		517C98B318B801C800FC4694 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				517C98B418B801C800FC4694 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
