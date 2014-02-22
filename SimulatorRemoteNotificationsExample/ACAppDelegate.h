@@ -13,7 +13,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 // used by unit tests
-@property (nonatomic, assign) BOOL didRegister;
-@property (nonatomic, assign) BOOL didReceive;
+@property (nonatomic, strong) NSData *didRegisterForRemoteNotificationsWithDeviceToken;
+@property (nonatomic, strong) NSDictionary *didReceiveRemoteNotificationUserInfo;
 
 @end

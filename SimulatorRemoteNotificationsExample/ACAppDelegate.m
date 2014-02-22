@@ -36,7 +36,7 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	NSLog(@"Device token = \"%@\"", [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding]);
     
-    self.didRegister = YES;
+    self.didRegisterForRemoteNotificationsWithDeviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -52,7 +52,7 @@
 		[alert show];
 	}
     
-    self.didReceive = YES;
+    self.didReceiveRemoteNotificationUserInfo = userInfo;
 }
 
 @end

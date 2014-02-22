@@ -18,7 +18,8 @@
     
     ACAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
-    [[ACSimulatorRemoteNotificationsService sharedService] send:@{@"message": @"message"}];
+    NSDictionary *dictionary = @{@"message": @"message"};
+    [[ACSimulatorRemoteNotificationsService sharedService] send:dictionary];
     
     NSDate *date = [NSDate date];
 	while (YES) {
@@ -29,8 +30,8 @@
 		}
 	}
     
-    STAssertTrue(appDelegate.didRegister, nil);
-    STAssertTrue(appDelegate.didReceive, nil);
+    STAssertNotNil(appDelegate.didRegisterForRemoteNotificationsWithDeviceToken, nil);
+    STAssertEqualObjects(dictionary, appDelegate.didReceiveRemoteNotificationUserInfo, nil);
 }
 
 @end
