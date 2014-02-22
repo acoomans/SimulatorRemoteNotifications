@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import "ACAppDelegate.h"
+#import "ACExampleAppDelegate.h"
 #import "ACMainViewController.h"
 
 #if DEBUG
@@ -14,7 +14,7 @@
 #endif
 
 
-@implementation ACAppDelegate
+@implementation ACExampleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import "ACAppDelegate.h"
+#import "ACBackgroundExampleAppDelegate.h"
 #import "ACMainViewController.h"
 
 #if DEBUG
@@ -14,7 +14,7 @@
 #endif
 
 
-@implementation ACAppDelegate
+@implementation ACBackgroundExampleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -35,6 +35,8 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	NSLog(@"Device token = \"%@\"", [[NSString alloc] initWithData:deviceToken encoding:NSUTF8StringEncoding]);
+    
+    self.didRegisterForRemoteNotificationsWithDeviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -42,7 +44,8 @@
     [[NSException exceptionWithName:@"MethodShouldNotHaveBeenCalledException"
                             reason:@"application:didReceiveRemoteNotification: was called instead of application:didReceiveRemoteNotification:fetchCompletionHandler:"
                           userInfo:nil] raise];
-
+    
+    self.didReceiveRemoteNotificationUserInfo = userInfo;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {
@@ -66,6 +69,8 @@
     }
 
     handler(UIBackgroundFetchResultNoData);
+    
+    self.didReceiveRemoteNotificationFetchCompletionHandlerUserInfo = userInfo;
 }
 
 @end

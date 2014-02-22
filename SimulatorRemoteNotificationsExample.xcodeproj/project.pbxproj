@@ -12,7 +12,7 @@
 		515184C416CC71AC007E471F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C316CC71AC007E471F /* CoreGraphics.framework */; };
 		515184CA16CC71AC007E471F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 515184C816CC71AC007E471F /* InfoPlist.strings */; };
 		515184CC16CC71AC007E471F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184CB16CC71AC007E471F /* main.m */; };
-		515184D016CC71AC007E471F /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184CF16CC71AC007E471F /* ACAppDelegate.m */; };
+		515184D016CC71AC007E471F /* ACExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 515184CF16CC71AC007E471F /* ACExampleAppDelegate.m */; };
 		515184D216CC71AC007E471F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 515184D116CC71AC007E471F /* Default.png */; };
 		515184D416CC71AC007E471F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 515184D316CC71AC007E471F /* Default@2x.png */; };
 		515184D616CC71AC007E471F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 515184D516CC71AC007E471F /* Default-568h@2x.png */; };
@@ -38,15 +38,16 @@
 		5188297D182AD38E00EF0ADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184BF16CC71AC007E471F /* UIKit.framework */; };
 		51882983182AD38E00EF0ADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51882981182AD38E00EF0ADB /* InfoPlist.strings */; };
 		51882985182AD38E00EF0ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51882984182AD38E00EF0ADB /* main.m */; };
-		51882989182AD38E00EF0ADB /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51882988182AD38E00EF0ADB /* ACAppDelegate.m */; };
-		5188299B182AD38F00EF0ADB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188299A182AD38F00EF0ADB /* XCTest.framework */; };
-		5188299C182AD38F00EF0ADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
-		5188299D182AD38F00EF0ADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184BF16CC71AC007E471F /* UIKit.framework */; };
-		518829A5182AD38F00EF0ADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518829A3182AD38F00EF0ADB /* InfoPlist.strings */; };
-		518829A7182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 518829A6182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.m */; };
+		51882989182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51882988182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.m */; };
 		518829AE182AD3EF00EF0ADB /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151850016CC753F007E471F /* ACMainViewController.m */; };
 		518829AF182AD3F700EF0ADB /* ACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151850416CC788B007E471F /* ACMainViewController.xib */; };
 		518829B0182AD8FC00EF0ADB /* UIApplication+SimulatorRemoteNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */; };
+		51EB436318B82B76002479EA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184DD16CC71AC007E471F /* SenTestingKit.framework */; };
+		51EB436418B82B76002479EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
+		51EB436518B82B76002479EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184BF16CC71AC007E471F /* UIKit.framework */; };
+		51EB436B18B82B76002479EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51EB436918B82B76002479EA /* InfoPlist.strings */; };
+		51EB436D18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EB436C18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.m */; };
+		51EB437518B82D59002479EA /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 			remoteGlobalIDString = 517C989818B801C800FC4694;
 			remoteInfo = SimulatorRemoteNotificationsLib;
 		};
-		5188299E182AD38F00EF0ADB /* PBXContainerItemProxy */ = {
+		51EB436F18B82B77002479EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 515184B216CC71AC007E471F /* Project object */;
 			proxyType = 1;
@@ -82,8 +83,8 @@
 		515184C916CC71AC007E471F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		515184CB16CC71AC007E471F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		515184CD16CC71AC007E471F /* SimulatorRemoteNotificationsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsExample-Prefix.pch"; sourceTree = "<group>"; };
-		515184CE16CC71AC007E471F /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
-		515184CF16CC71AC007E471F /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
+		515184CE16CC71AC007E471F /* ACExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACExampleAppDelegate.h; sourceTree = "<group>"; };
+		515184CF16CC71AC007E471F /* ACExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACExampleAppDelegate.m; sourceTree = "<group>"; };
 		515184D116CC71AC007E471F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		515184D316CC71AC007E471F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		515184D516CC71AC007E471F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -116,13 +117,15 @@
 		51882982182AD38E00EF0ADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		51882984182AD38E00EF0ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51882986182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsBackgroundExample-Prefix.pch"; sourceTree = "<group>"; };
-		51882987182AD38E00EF0ADB /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
-		51882988182AD38E00EF0ADB /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
-		51882999182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRemoteNotificationsBackgroundExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51882987182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACBackgroundExampleAppDelegate.h; sourceTree = "<group>"; };
+		51882988182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACBackgroundExampleAppDelegate.m; sourceTree = "<group>"; };
 		5188299A182AD38F00EF0ADB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		518829A2182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist"; sourceTree = "<group>"; };
-		518829A4182AD38F00EF0ADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		518829A6182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorRemoteNotificationsBackgroundExampleTests.m; sourceTree = "<group>"; };
+		51EB436218B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRemoteNotificationsBackgroundExampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EB436818B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist"; sourceTree = "<group>"; };
+		51EB436A18B82B76002479EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		51EB436C18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorRemoteNotificationsBackgroundExampleTests.m; sourceTree = "<group>"; };
+		51EB436E18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsBackgroundExampleTests-Prefix.pch"; sourceTree = "<group>"; };
+		51EB437418B82B8E002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorRemoteNotificationsBackgroundExampleTests.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,13 +178,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51882996182AD38F00EF0ADB /* Frameworks */ = {
+		51EB435F18B82B76002479EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5188299B182AD38F00EF0ADB /* XCTest.framework in Frameworks */,
-				5188299D182AD38F00EF0ADB /* UIKit.framework in Frameworks */,
-				5188299C182AD38F00EF0ADB /* Foundation.framework in Frameworks */,
+				51EB437518B82D59002479EA /* libSimulatorRemoteNotificationsLib.a in Frameworks */,
+				51EB436318B82B76002479EA /* SenTestingKit.framework in Frameworks */,
+				51EB436518B82B76002479EA /* UIKit.framework in Frameworks */,
+				51EB436418B82B76002479EA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +200,7 @@
 				515184C516CC71AC007E471F /* SimulatorRemoteNotificationsExample */,
 				515184E316CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */,
 				5188297E182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */,
-				518829A0182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests */,
+				51EB436618B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */,
 				517C98A018B801C800FC4694 /* SimulatorRemoteNotificationsLib */,
 				517C98B018B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */,
 				515184BE16CC71AC007E471F /* Frameworks */,
@@ -210,9 +214,9 @@
 				515184BB16CC71AC007E471F /* SimulatorRemoteNotificationsExample.app */,
 				515184DC16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.octest */,
 				5188297A182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample.app */,
-				51882999182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.xctest */,
 				517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */,
 				517C98AA18B801C800FC4694 /* SimulatorRemoteNotificationsLibTests.xctest */,
+				51EB436218B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,8 +238,8 @@
 		515184C516CC71AC007E471F /* SimulatorRemoteNotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
-				515184CE16CC71AC007E471F /* ACAppDelegate.h */,
-				515184CF16CC71AC007E471F /* ACAppDelegate.m */,
+				515184CE16CC71AC007E471F /* ACExampleAppDelegate.h */,
+				515184CF16CC71AC007E471F /* ACExampleAppDelegate.m */,
 				515184FF16CC753F007E471F /* ACMainViewController.h */,
 				5151850016CC753F007E471F /* ACMainViewController.m */,
 				5151850416CC788B007E471F /* ACMainViewController.xib */,
@@ -335,8 +339,8 @@
 		5188297E182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */ = {
 			isa = PBXGroup;
 			children = (
-				51882987182AD38E00EF0ADB /* ACAppDelegate.h */,
-				51882988182AD38E00EF0ADB /* ACAppDelegate.m */,
+				51882987182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.h */,
+				51882988182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.m */,
 				5188297F182AD38E00EF0ADB /* Supporting Files */,
 			);
 			path = SimulatorRemoteNotificationsBackgroundExample;
@@ -353,20 +357,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		518829A0182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests */ = {
+		51EB436618B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				518829A6182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.m */,
-				518829A1182AD38F00EF0ADB /* Supporting Files */,
+				51EB437418B82B8E002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.h */,
+				51EB436C18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.m */,
+				51EB436718B82B76002479EA /* Supporting Files */,
 			);
 			path = SimulatorRemoteNotificationsBackgroundExampleTests;
 			sourceTree = "<group>";
 		};
-		518829A1182AD38F00EF0ADB /* Supporting Files */ = {
+		51EB436718B82B76002479EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				518829A2182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist */,
-				518829A3182AD38F00EF0ADB /* InfoPlist.strings */,
+				51EB436818B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests-Info.plist */,
+				51EB436918B82B76002479EA /* InfoPlist.strings */,
+				51EB436E18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -473,23 +479,23 @@
 			productReference = 5188297A182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		51882998182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests */ = {
+		51EB436118B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 518829AD182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExampleTests" */;
+			buildConfigurationList = 51EB437118B82B77002479EA /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExampleTests" */;
 			buildPhases = (
-				51882995182AD38F00EF0ADB /* Sources */,
-				51882996182AD38F00EF0ADB /* Frameworks */,
-				51882997182AD38F00EF0ADB /* Resources */,
+				51EB435E18B82B76002479EA /* Sources */,
+				51EB435F18B82B76002479EA /* Frameworks */,
+				51EB436018B82B76002479EA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5188299F182AD38F00EF0ADB /* PBXTargetDependency */,
+				51EB437018B82B77002479EA /* PBXTargetDependency */,
 			);
 			name = SimulatorRemoteNotificationsBackgroundExampleTests;
 			productName = SimulatorRemoteNotificationsBackgroundExampleTests;
-			productReference = 51882999182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = 51EB436218B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -504,8 +510,8 @@
 					517C98A918B801C800FC4694 = {
 						TestTargetID = 517C989818B801C800FC4694;
 					};
-					51882998182AD38F00EF0ADB = {
-						TestTargetID = 515184BA16CC71AC007E471F;
+					51EB436118B82B76002479EA = {
+						TestTargetID = 51882979182AD38E00EF0ADB;
 					};
 				};
 			};
@@ -525,7 +531,7 @@
 				515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */,
 				515184DB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */,
 				51882979182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */,
-				51882998182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests */,
+				51EB436118B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */,
 				517C989818B801C800FC4694 /* SimulatorRemoteNotificationsLib */,
 				517C98A918B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */,
 			);
@@ -570,11 +576,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51882997182AD38F00EF0ADB /* Resources */ = {
+		51EB436018B82B76002479EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				518829A5182AD38F00EF0ADB /* InfoPlist.strings in Resources */,
+				51EB436B18B82B76002479EA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				515184CC16CC71AC007E471F /* main.m in Sources */,
-				515184D016CC71AC007E471F /* ACAppDelegate.m in Sources */,
+				515184D016CC71AC007E471F /* ACExampleAppDelegate.m in Sources */,
 				5151850216CC753F007E471F /* ACMainViewController.m in Sources */,
 				51741967173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m in Sources */,
 			);
@@ -636,18 +642,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51882989182AD38E00EF0ADB /* ACAppDelegate.m in Sources */,
+				51882989182AD38E00EF0ADB /* ACBackgroundExampleAppDelegate.m in Sources */,
 				518829AE182AD3EF00EF0ADB /* ACMainViewController.m in Sources */,
 				518829B0182AD8FC00EF0ADB /* UIApplication+SimulatorRemoteNotifications.m in Sources */,
 				51882985182AD38E00EF0ADB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51882995182AD38F00EF0ADB /* Sources */ = {
+		51EB435E18B82B76002479EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				518829A7182AD38F00EF0ADB /* SimulatorRemoteNotificationsBackgroundExampleTests.m in Sources */,
+				51EB436D18B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,10 +670,10 @@
 			target = 517C989818B801C800FC4694 /* SimulatorRemoteNotificationsLib */;
 			targetProxy = 517C98AD18B801C800FC4694 /* PBXContainerItemProxy */;
 		};
-		5188299F182AD38F00EF0ADB /* PBXTargetDependency */ = {
+		51EB437018B82B77002479EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51882979182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */;
-			targetProxy = 5188299E182AD38F00EF0ADB /* PBXContainerItemProxy */;
+			targetProxy = 51EB436F18B82B77002479EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,10 +710,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		518829A3182AD38F00EF0ADB /* InfoPlist.strings */ = {
+		51EB436918B82B76002479EA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				518829A4182AD38F00EF0ADB /* en */,
+				51EB436A18B82B76002479EA /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1004,11 +1010,11 @@
 			};
 			name = Release;
 		};
-		518829AA182AD38F00EF0ADB /* Debug */ = {
+		51EB437218B82B77002479EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsExample.app/SimulatorRemoteNotificationsExample";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsBackgroundExample.app/SimulatorRemoteNotificationsBackgroundExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1022,7 +1028,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsBackgroundExample/SimulatorRemoteNotificationsBackgroundExample-Prefix.pch";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsBackgroundExampleTests/SimulatorRemoteNotificationsBackgroundExampleTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1035,15 +1041,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		518829AB182AD38F00EF0ADB /* Release */ = {
+		51EB437318B82B77002479EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsExample.app/SimulatorRemoteNotificationsExample";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsBackgroundExample.app/SimulatorRemoteNotificationsBackgroundExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1058,7 +1064,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsBackgroundExample/SimulatorRemoteNotificationsBackgroundExample-Prefix.pch";
+				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsBackgroundExampleTests/SimulatorRemoteNotificationsBackgroundExampleTests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1067,7 +1073,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1128,14 +1134,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		518829AD182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExampleTests" */ = {
+		51EB437118B82B77002479EA /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				518829AA182AD38F00EF0ADB /* Debug */,
-				518829AB182AD38F00EF0ADB /* Release */,
+				51EB437218B82B77002479EA /* Debug */,
+				51EB437318B82B77002479EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

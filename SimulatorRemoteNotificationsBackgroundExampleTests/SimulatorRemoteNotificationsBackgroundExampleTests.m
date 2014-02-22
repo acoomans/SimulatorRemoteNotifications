@@ -2,33 +2,38 @@
 //  SimulatorRemoteNotificationsBackgroundExampleTests.m
 //  SimulatorRemoteNotificationsBackgroundExampleTests
 //
-//  Created by Arnaud Coomans on 11/6/13.
-//  Copyright (c) 2013 acoomans. All rights reserved.
+//  Created by Arnaud Coomans on 21/02/14.
+//  Copyright (c) 2014 acoomans. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-
-@interface SimulatorRemoteNotificationsBackgroundExampleTests : XCTestCase
-
-@end
+#import "SimulatorRemoteNotificationsBackgroundExampleTests.h"
+#import "ACSimulatorRemoteNotificationsService.h"
+#import "UIApplication+SimulatorRemoteNotifications.h"
+#import "ACBackgroundExampleAppDelegate.h"
 
 @implementation SimulatorRemoteNotificationsBackgroundExampleTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testExample {
+    
+    ACBackgroundExampleAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    NSDictionary *dictionary = @{@"message": @"message"};
+    [[ACSimulatorRemoteNotificationsService sharedService] send:dictionary];
+    
+    NSDate *date = [NSDate date];
+	while (YES) {
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+								 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1.0]];
+		if ([[NSDate date] timeIntervalSinceDate:date] > 1) {
+			break;
+		}
+	}
+    
+    NSLog(@"didReceiveRemoteNotificationFetchCompletionHandlerUserInfo: %@", appDelegate.didReceiveRemoteNotificationFetchCompletionHandlerUserInfo);
+    
+    STAssertNotNil(appDelegate.didRegisterForRemoteNotificationsWithDeviceToken, nil);
+    STAssertNil(appDelegate.didReceiveRemoteNotificationUserInfo, nil);
+    STAssertEqualObjects(dictionary, appDelegate.didReceiveRemoteNotificationFetchCompletionHandlerUserInfo, nil);
 }
 
 @end

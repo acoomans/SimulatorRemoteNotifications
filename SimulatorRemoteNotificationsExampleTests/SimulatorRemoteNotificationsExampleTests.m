@@ -9,14 +9,14 @@
 #import "SimulatorRemoteNotificationsExampleTests.h"
 #import "ACSimulatorRemoteNotificationsService.h"
 #import "UIApplication+SimulatorRemoteNotifications.h"
-#import "ACAppDelegate.h"
+#import "ACExampleAppDelegate.h"
 
 
 @implementation SimulatorRemoteNotificationsExampleTests
 
 - (void)testExample {
     
-    ACAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    ACExampleAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
     NSDictionary *dictionary = @{@"message": @"message"};
     [[ACSimulatorRemoteNotificationsService sharedService] send:dictionary];
@@ -29,6 +29,8 @@
 			break;
 		}
 	}
+    
+    NSLog(@"didReceiveRemoteNotificationUserInfo: %@", appDelegate.didReceiveRemoteNotificationUserInfo);
     
     STAssertNotNil(appDelegate.didRegisterForRemoteNotificationsWithDeviceToken, nil);
     STAssertEqualObjects(dictionary, appDelegate.didReceiveRemoteNotificationUserInfo, nil);
