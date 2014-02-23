@@ -40,6 +40,7 @@
 		51C4958418B9B4720062E968 /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C4958318B9B4720062E968 /* ACAppDelegate.m */; };
 		51C4958718B9B4720062E968 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C4958518B9B4720062E968 /* MainMenu.xib */; };
 		51C4958918B9B4720062E968 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C4958818B9B4720062E968 /* Images.xcassets */; };
+		51C495A118B9C93F0062E968 /* libSimulatorRemoteNotifications-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotifications-OSX.a */; };
 		51D01CB718B9A6A1001997E0 /* UIApplication+SimulatorRemoteNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */; };
 		51D01CB818B9A6A1001997E0 /* ACSimulatorRemoteNotificationsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D01CB618B9A65F001997E0 /* ACSimulatorRemoteNotificationsService.m */; };
 		51D01CBE18B9A73C001997E0 /* SimulatorRemoteNotifications-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 51D01CBD18B9A73C001997E0 /* SimulatorRemoteNotifications-Prefix.pch */; };
@@ -175,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C495A118B9C93F0062E968 /* libSimulatorRemoteNotifications-OSX.a in Frameworks */,
 				51C4957518B9B4720062E968 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
