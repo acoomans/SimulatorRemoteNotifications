@@ -8,6 +8,8 @@
 
 #import "UIApplication+SimulatorRemoteNotifications.h"
 
+#ifdef UIKIT_AVAILABLE
+
 #import <arpa/inet.h>
 #import <netinet/in.h>
 #import <stdio.h>
@@ -140,3 +142,5 @@ static int __port = SimulatorRemoteNotificationsDefaultPort;
 }
 
 @end
+
+#endif

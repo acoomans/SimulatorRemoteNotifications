@@ -74,5 +74,4 @@ static NSString * const SimulatorRemoteNotificationsServiceDefaultHost = @"127.0
     close(s);
 }
 
-
 @end

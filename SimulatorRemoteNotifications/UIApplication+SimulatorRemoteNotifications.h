@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 acoomans. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
+#if defined(__has_include)
+#if __has_include(<UIKit/UIKit.h>)
+#import <UIKit/UIKit.h>
+#define UIKIT_AVAILABLE 1
 
 /** SimulatorRemoteNotifications is a category that adds remote notifications by listening on a UDP port. This makes it effectively possible to receive mock remote notifications in the iOS simulator
  */
@@ -28,3 +31,6 @@
 - (void)listenForRemoteNotifications;
 
 @end
+
+#endif
+#endif
