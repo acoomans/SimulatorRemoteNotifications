@@ -24,12 +24,8 @@
 		5151850216CC753F007E471F /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151850016CC753F007E471F /* ACMainViewController.m */; };
 		5151850516CC788B007E471F /* ACMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151850416CC788B007E471F /* ACMainViewController.xib */; };
 		51741967173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 51741966173A167E0073FF2B /* UIApplication+SimulatorRemoteNotifications.m */; };
-		517C989B18B801C800FC4694 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989A18B801C800FC4694 /* Cocoa.framework */; };
-		517C98AC18B801C800FC4694 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989A18B801C800FC4694 /* Cocoa.framework */; };
-		517C98AF18B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
 		517C98C018B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h in Headers */ = {isa = PBXBuildFile; fileRef = 517C98BE18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h */; };
 		517C98C118B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C98BF18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m */; };
-		517C98C718B80C5600FC4694 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5188299A182AD38F00EF0ADB /* XCTest.framework */; };
 		517C98F818B8282B00FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */; };
 		5188297B182AD38E00EF0ADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C116CC71AC007E471F /* Foundation.framework */; };
 		5188297C182AD38E00EF0ADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515184C316CC71AC007E471F /* CoreGraphics.framework */; };
@@ -55,13 +51,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 515184BA16CC71AC007E471F;
 			remoteInfo = SimulatorRemoteNotificationsExample;
-		};
-		517C98AD18B801C800FC4694 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 515184B216CC71AC007E471F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 517C989818B801C800FC4694;
-			remoteInfo = SimulatorRemoteNotificationsLib;
 		};
 		51EB436F18B82B77002479EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -104,7 +93,6 @@
 		517C989E18B801C800FC4694 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		517C989F18B801C800FC4694 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		517C98A218B801C800FC4694 /* SimulatorRemoteNotificationsLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorRemoteNotificationsLib-Prefix.pch"; sourceTree = "<group>"; };
-		517C98AA18B801C800FC4694 /* SimulatorRemoteNotificationsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRemoteNotificationsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C98BE18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSimulatorRemoteNotificationsService.h; sourceTree = "<group>"; };
 		517C98BF18B8024C00FC4694 /* ACSimulatorRemoteNotificationsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSimulatorRemoteNotificationsService.m; sourceTree = "<group>"; };
 		5188297A182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRemoteNotificationsBackgroundExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,17 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517C989B18B801C800FC4694 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517C98A718B801C800FC4694 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				517C98C718B80C5600FC4694 /* XCTest.framework in Frameworks */,
-				517C98AF18B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a in Frameworks */,
-				517C98AC18B801C800FC4694 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +186,6 @@
 				515184DC16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests.octest */,
 				5188297A182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample.app */,
 				517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */,
-				517C98AA18B801C800FC4694 /* SimulatorRemoteNotificationsLibTests.xctest */,
 				51EB436218B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests.octest */,
 			);
 			name = Products;
@@ -420,24 +396,6 @@
 			productReference = 517C989918B801C800FC4694 /* libSimulatorRemoteNotificationsLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		517C98A918B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 517C98BD18B801C800FC4694 /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsLibTests" */;
-			buildPhases = (
-				517C98A618B801C800FC4694 /* Sources */,
-				517C98A718B801C800FC4694 /* Frameworks */,
-				517C98A818B801C800FC4694 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				517C98AE18B801C800FC4694 /* PBXTargetDependency */,
-			);
-			name = SimulatorRemoteNotificationsLibTests;
-			productName = SimulatorRemoteNotificationsLibTests;
-			productReference = 517C98AA18B801C800FC4694 /* SimulatorRemoteNotificationsLibTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		51882979182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 518829AC182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExample" */;
@@ -480,12 +438,9 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AC;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = acoomans;
 				TargetAttributes = {
-					517C98A918B801C800FC4694 = {
-						TestTargetID = 517C989818B801C800FC4694;
-					};
 					51EB436118B82B76002479EA = {
 						TestTargetID = 51882979182AD38E00EF0ADB;
 					};
@@ -509,7 +464,6 @@
 				51882979182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */,
 				51EB436118B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */,
 				517C989818B801C800FC4694 /* SimulatorRemoteNotificationsLib */,
-				517C98A918B801C800FC4694 /* SimulatorRemoteNotificationsLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -532,13 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				515184E816CC71AC007E471F /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517C98A818B801C800FC4694 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,13 +552,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		517C98A618B801C800FC4694 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		51882976182AD38E00EF0ADB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,11 +578,6 @@
 			isa = PBXTargetDependency;
 			target = 515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */;
 			targetProxy = 515184E116CC71AC007E471F /* PBXContainerItemProxy */;
-		};
-		517C98AE18B801C800FC4694 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 517C989818B801C800FC4694 /* SimulatorRemoteNotificationsLib */;
-			targetProxy = 517C98AD18B801C800FC4694 /* PBXContainerItemProxy */;
 		};
 		51EB437018B82B77002479EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -823,6 +758,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -852,77 +788,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
-			};
-			name = Release;
-		};
-		517C98BA18B801C800FC4694 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsLib/SimulatorRemoteNotificationsLib-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "SimulatorRemoteNotificationsLibTests/SimulatorRemoteNotificationsLibTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		517C98BB18B801C800FC4694 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimulatorRemoteNotificationsLib/SimulatorRemoteNotificationsLib-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "SimulatorRemoteNotificationsLibTests/SimulatorRemoteNotificationsLibTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
 		518829A8182AD38F00EF0ADB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -952,7 +824,6 @@
 		518829A9182AD38F00EF0ADB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -979,7 +850,6 @@
 		51EB437218B82B77002479EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsBackgroundExample.app/SimulatorRemoteNotificationsBackgroundExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1014,7 +884,6 @@
 		51EB437318B82B77002479EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulatorRemoteNotificationsBackgroundExample.app/SimulatorRemoteNotificationsBackgroundExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1082,15 +951,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		517C98BD18B801C800FC4694 /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsLibTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				517C98BA18B801C800FC4694 /* Debug */,
-				517C98BB18B801C800FC4694 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		518829AC182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1107,6 +967,7 @@
 				51EB437318B82B77002479EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
