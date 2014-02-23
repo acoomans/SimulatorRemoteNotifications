@@ -566,13 +566,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				517C989818B801C800FC4694 /* SimulatorRemoteNotifications-OSX */,
 				51D3517118B9B0F500ECA215 /* SimulatorRemoteNotifications-iOS */,
 				515184BA16CC71AC007E471F /* SimulatorRemoteNotificationsExample */,
 				515184DB16CC71AC007E471F /* SimulatorRemoteNotificationsExampleTests */,
 				51882979182AD38E00EF0ADB /* SimulatorRemoteNotificationsBackgroundExample */,
 				51EB436118B82B76002479EA /* SimulatorRemoteNotificationsBackgroundExampleTests */,
 				51C4957318B9B4710062E968 /* iOS Simulator Notifications */,
+				517C989818B801C800FC4694 /* SimulatorRemoteNotifications-OSX */,
 				5186E8D118B9A086007CA8E5 /* Documentation */,
 			);
 		};
