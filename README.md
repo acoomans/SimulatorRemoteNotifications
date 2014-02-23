@@ -4,6 +4,9 @@ SimulatorRemoteNotifications is an iOS library to send mock remote notifications
 
 The library extends _UIApplication_ by embedding a mini server that listen for UDP packets containing JSON-formated payload. Is also contains a service to send notifications to the mini server, for use in tests.
 
+This project includes the _iOS Simulator Notifications_ MacOSX app to help you send the notifications.
+
+
 Note that SimulatorRemoteNotifications does not send notification through Apple's Push Service.
 
 [![Build Status](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)
@@ -69,11 +72,12 @@ Now, to send a remote notification, send an udp packet to localhost:9930.
 Note that if you send a notification while the app is in the background, _application:didReceiveRemoteNotification:fetchCompletionHandler:_ will only be called when you bring the app to the foreground.
 
 
-### Sending a mock remote notification from the command line
+### Sending a mock remote notification with the iOS Simulator Notifications app
 
-You can send mock remote notifications from the terminal by using netcat:
+The project comes with a OSX app called _iOS Simulator Notifications_ to help you send notifications to the iOS Simulator.
 
-	echo -n '{"message":"message"}' | nc -4u -w1 localhost 9930
+Build and run the target and you'll have a nice interface to send notification to your app in the simulator.
+
 
 ### Sending a mock remote notification in tests
 
@@ -88,6 +92,11 @@ You can change the host (default: 127.0.0.1) and port (default: 9930) with
 	[[ACSimulatorRemoteNotificationsService sharedService] setRemoteNotificationsPort:1234];
 	[[ACSimulatorRemoteNotificationsService sharedService] setRemoteNotificationsHost:@"10.0.0.1"];
 
+### Sending a mock remote notification from the command line
+
+You can send mock remote notifications from the terminal by using netcat:
+
+	echo -n '{"message":"message"}' | nc -4u -w1 localhost 9930
 	
 ## Examples
 
