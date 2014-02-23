@@ -1,10 +1,10 @@
 # SimulatorRemoteNotifications
 
-SimulatorRemoteNotifications is an iOS library to send mock remote notifications to the iOS simulator.
+SimulatorRemoteNotifications is a library to send mock remote notifications to the iOS simulator.
 
-The library extends _UIApplication_ by embedding a mini server that listen for UDP packets containing JSON-formated payload. Is also contains a service to send notifications to the mini server, for use in tests.
+The library extends _UIApplication_ by embedding a mini server that listen for UDP packets containing JSON-formated payload, and a service to send notifications to the mini server.
 
-This project includes the _iOS Simulator Notifications_ MacOSX app to help you send the notifications.
+This project includes the _iOS Simulator Notifications_ MacOSX app to help you send the mock notifications.
 
 
 Note that SimulatorRemoteNotifications does not send notification through Apple's Push Service.
@@ -28,7 +28,7 @@ Install the pod(s) by running:
 
 ### Install the static library
 
-1. Copy the project file in yours
+1. Copy the project file in your project
 2. Link your binary with the library, under _Target_ > _Build Phases_ > _Link binary with libraries_ then add the _libSimulatorRemoteNotifications.a_
 3. set `OTHER_LINKER_FLAGS="-ObjC"` for your target
 
@@ -72,11 +72,11 @@ Now, to send a remote notification, send an udp packet to localhost:9930.
 Note that if you send a notification while the app is in the background, _application:didReceiveRemoteNotification:fetchCompletionHandler:_ will only be called when you bring the app to the foreground.
 
 
-### Sending a mock remote notification with the iOS Simulator Notifications app
+### Sending a mock remote notification with the _iOS Simulator Notifications_  app
 
 The project comes with a OSX app called _iOS Simulator Notifications_ to help you send notifications to the iOS Simulator.
 
-Build and run the target and you'll have a nice interface to send notification to your app in the simulator.
+Build and run the target and you'll have a nice interface to send notification to your app in the simulator (see screenshots).
 
 
 ### Sending a mock remote notification in tests
@@ -94,10 +94,15 @@ You can change the host (default: 127.0.0.1) and port (default: 9930) with
 
 ### Sending a mock remote notification from the command line
 
-You can send mock remote notifications from the terminal by using netcat:
+You can also send mock remote notifications from the terminal by using netcat:
 
 	echo -n '{"message":"message"}' | nc -4u -w1 localhost 9930
-	
+
+## Screenshot
+
+![screenshots](Screenshots/screenshot01.png)
+![screenshots](Screenshots/screenshot02.png)
+
 ## Examples
 
 You can look at _SimulatorRemoteNotifications.xcodeproj_ for examples:
