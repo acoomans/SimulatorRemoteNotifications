@@ -1,18 +1,18 @@
 Pod::Spec.new do |s|
   s.name = "SimulatorRemoteNotifications"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.license = { :type => 'BSD', :file => 'LICENSE' }
-  s.summary = "Library to send (fake) remote notifications to the iOS simulator"
+  s.summary = "Library to send mock remote notifications to the iOS simulator"
   s.homepage = "https://github.com/acoomans/SimulatorRemoteNotifications"
-  s.screenshots = "s3.amazonaws.com/cocoacontrols_production/uploads/control_image/image/85/original.png"
+  s.screenshots = [ "Screenshots/screenshot01.png", "Screenshots/screenshot02.png" ]
 
   s.requires_arc = true
   s.platform = :ios
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '6.0'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   s.author = { "Arnaud Coomans" => "arnaud.coomans@gmail.com" }
 
   s.source_files = 'SimulatorRemoteNotifications/**/*.{h,m}'
-  s.source = { :git => "https://github.com/acoomans/SimulatorRemoteNotifications.git", :tag => '0.0.2' }
+  s.source = { :git => "https://github.com/acoomans/SimulatorRemoteNotifications.git", :tag => '0.0.3' }
 end
