@@ -1,6 +1,6 @@
 # SimulatorRemoteNotifications
 
-SimulatorRemoteNotifications is an iOS library to send (fake) remote notifications to the iOS simulator.
+SimulatorRemoteNotifications is an iOS library to send mock remote notifications to the iOS simulator.
 
 The library extends _UIApplication_ by embedding a mini server that listen for udp packets containing JSON-formated payload.
 
@@ -11,17 +11,24 @@ Note that SimulatorRemoteNotifications does not send notification through Apple'
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/SimulatorRemoteNotifications/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASimulatorRemoteNotifications%2A)
 
 
-## Install with CocoaPods
+## Install
 
-You can either clone this repository or use [CocoaPods](http://cocoapods.org) to add SimulatorRemoteNotifications to your project.
+### Install with [CocoaPods](http://cocoapods.org)
 
-Add a pod entry for Parallax to your Podfile:
+Add a pod entry to your Podfile:
 
-	pod 'SimulatorRemoteNotifications', '~> 0.0.2'
+    pod 'SimulatorRemoteNotifications', '~> 0.0.2'
 
 Install the pod(s) by running:
 
-	pod install
+    pod install
+    
+### Install manually
+
+1. clone this repository
+2. add the files in the _SimulatorRemoteNotifications_ directory to your project
+3. set `OTHER_LINKER_FLAGS="-ObjC" for your target
+
 
 ## Usage
 
@@ -58,6 +65,9 @@ You can look at _SimulatorRemoteNotificationsExample.xcodeproj_ for examples. It
 - _SimulatorRemoteNotificationsExample_, application:didReceiveRemoteNotification: is called
 - _SimulatorRemoteNotificationsBackgroundExample_, application:didReceiveRemoteNotification:fetchCompletionHandler: is called
 
+## Documentation
+
+If you have [appledoc](http://gentlebytes.com/appledoc/) installed, you can generate the documentation by running the corresponding target.
 	
 ## Note
 
