@@ -1,0 +1,198 @@
+//
+//  GuiController.h
+//  SimulatorRemoteNotifications
+//
+//  Created by Arnaud Coomans on 22/02/14.
+//  Copyright (c) 2014 acoomans. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+
+@class SimulatorView;
+@class SimulatorViewController;
+@class SimulatorGlassWindow;
+@class SimulatorGlassView;
+@class SimulatorHomeView;
+@class SimulatorChromeView;
+@class DeviceWindow;
+@class IndigoSessionController;
+@class PreferencesController;
+
+
+@interface GuiController : NSObject
+
++ (void)setStartingURL:(char *)arg1;
++ (id)sharedInstance;
+
+@property NSObject<OS_dispatch_queue> *eventQueue; // @synthesize eventQueue=_eventQueue;
+@property(retain) id deviceBundleObject; // @synthesize deviceBundleObject=_deviceBundleObject;
+@property(retain) NSBundle *deviceBundle; // @synthesize deviceBundle=_deviceBundle;
+@property(retain) NSScrollView *deviceWindowScrollView; // @synthesize deviceWindowScrollView=_deviceWindowScrollView;
+@property BOOL deviceWindowShowChrome; // @synthesize deviceWindowShowChrome=_deviceWindowShowChrome;
+@property int deviceWindowType; // @synthesize deviceWindowType=_deviceWindowType;
+@property(nonatomic) float deviceWindowScale; // @synthesize deviceWindowScale=_deviceWindowScale;
+@property struct CGSize recommendedWindowSize; // @synthesize recommendedWindowSize=_recommendedWindowSize;
+@property struct __MTDevice *mirrorDeviceRef; // @synthesize mirrorDeviceRef=_mirrorDeviceRef;
+@property int mirrorRotation; // @synthesize mirrorRotation=_mirrorRotation;
+@property struct CGAffineTransform mirrorTransform; // @synthesize mirrorTransform=_mirrorTransform;
+@property(retain) SimulatorView *mirrorView; // @synthesize mirrorView=_mirrorView;
+@property(retain) NSWindow *mirrorWindow; // @synthesize mirrorWindow=_mirrorWindow;
+@property BOOL mirrorScreenEvents; // @synthesize mirrorScreenEvents=_mirrorScreenEvents;
+@property BOOL mirrorScreenConnected; // @synthesize mirrorScreenConnected=_mirrorScreenConnected;
+@property BOOL mirrorOnly; // @synthesize mirrorOnly=_mirrorOnly;
+@property BOOL enableMirrorScreens; // @synthesize enableMirrorScreens=_enableMirrorScreens;
+@property BOOL treatHomeButtonAsDown; // @synthesize treatHomeButtonAsDown=_treatHomeButtonAsDown;
+@property BOOL simulatingHardwareKeyboard; // @synthesize simulatingHardwareKeyboard=_simulatingHardwareKeyboard;
+@property struct CGPoint startingSimulatorViewInset; // @synthesize startingSimulatorViewInset=_startingSimulatorViewInset;
+@property(retain) NSAppleScript *showProgrammingGuideScript; // @synthesize showProgrammingGuideScript=_showProgrammingGuideScript;
+@property BOOL haveLoadedWindowOnce; // @synthesize haveLoadedWindowOnce=_haveLoadedWindowOnce;
+@property BOOL deviceWindowIsBeingCreated; // @synthesize deviceWindowIsBeingCreated=_deviceWindowIsBeingCreated;
+@property BOOL wasHidpi; // @synthesize wasHidpi=_wasHidpi;
+@property BOOL inRotation; // @synthesize inRotation=_inRotation;
+@property struct CGAffineTransform transform; // @synthesize transform=_transform;
+@property(nonatomic) float rotation; // @synthesize rotation=_rotation;
+@property(retain) SimulatorView *tvOutSimulatorView; // @synthesize tvOutSimulatorView=_tvOutSimulatorView;
+@property(retain) SimulatorViewController *tvOutSimulatorViewController; // @synthesize tvOutSimulatorViewController=_tvOutSimulatorViewController;
+@property(retain) NSWindow *tvOutWindow; // @synthesize tvOutWindow=_tvOutWindow;
+@property long long tvOutMode; // @synthesize tvOutMode=_tvOutMode;
+@property(retain) SimulatorGlassWindow *glassWindow; // @synthesize glassWindow=_glassWindow;
+@property(retain) SimulatorGlassView *glassView; // @synthesize glassView=_glassView;
+@property(retain) SimulatorHomeView *homeView; // @synthesize homeView=_homeView;
+@property(retain) SimulatorView *simulatorView; // @synthesize simulatorView=_simulatorView;
+@property(retain) SimulatorChromeView *simulatorBox; // @synthesize simulatorBox=_simulatorBox;
+@property(retain) DeviceWindow *deviceWindow; // @synthesize deviceWindow=_deviceWindow;
+@property(retain) NSWindow *soundingWindow; // @synthesize soundingWindow=_soundingWindow;
+@property(retain) NSScreen *lastScreen; // @synthesize lastScreen=_lastScreen;
+@property(retain) SimulatorViewController *simulatorViewController; // @synthesize simulatorViewController=_simulatorViewController;
+@property long long selectedLocationTag; // @synthesize selectedLocationTag=_selectedLocationTag;
+@property(retain) IndigoSessionController *indigoSessionController; // @synthesize indigoSessionController=_indigoSessionController;
+@property NSButton *customLocationOKButton; // @synthesize customLocationOKButton=_customLocationOKButton;
+@property NSTextField *customLocationLongitudeField; // @synthesize customLocationLongitudeField=_customLocationLongitudeField;
+@property NSTextField *customLocationLatitudeField; // @synthesize customLocationLatitudeField=_customLocationLatitudeField;
+@property NSWindow *customLocationWindow; // @synthesize customLocationWindow=_customLocationWindow;
+@property NSMenuItem *tvExtrasMenuItem; // @synthesize tvExtrasMenuItem=_tvExtrasMenuItem;
+@property NSMenuItem *extrasMenuItem; // @synthesize extrasMenuItem=_extrasMenuItem;
+@property NSMenuItem *devicesMenuItem; // @synthesize devicesMenuItem=_devicesMenuItem;
+@property PreferencesController *preferencesController; // @synthesize preferencesController=_preferencesController;
+
+- (struct CGPoint)homeOriginForCurrentDeviceDoubled:(BOOL)arg1;
+- (id)homeImageForCurrentDeviceDoubled:(BOOL)arg1;
+- (id)chromeImageForCurrentDeviceDoubled:(BOOL)arg1;
+- (id)currentSDK;
+- (id)currentDeviceInfo;
+- (unsigned int)CADebugFlagForMenuItemTag:(long long)arg1;
+- (void)sendButtonEvent:(int)arg1;
+- (void)rotationTimeout;
+- (void)toggleRotationToOrientation:(int)arg1;
+- (float)radiansFromOrientation:(int)arg1;
+- (int)orientationFromRadians:(float)arg1;
+- (BOOL)orientationIsPortraitish;
+- (void)updateCustomLocationMode;
+- (void)populateLocationMenu;
+- (void)populateDeviceMenu;
+- (void)updateDeviceBundle;
+- (void)updateMirrorScreens;
+- (void)updateScreenInfo:(id)arg1;
+- (void)updateGlassWindow;
+- (void)setupGlassWindow;
+- (void)setupTvOutWindow;
+- (struct CGSize)sizeForScreen:(unsigned int)arg1;
+- (void)resetTvOutWindow;
+- (void)updateDeviceWindowLevel;
+- (void)updateScaledSimulatorFrame;
+- (struct CGSize)simulatorViewFrameDifference;
+- (struct CGRect)scrollDocumentFrame;
+- (struct CGSize)simulatorViewSize;
+- (void)updateWindowTitle;
+- (void)windowDidMove:(id)arg1;
+- (void)setupDeviceWindow;
+- (void)setupWindows;
+- (void)loadWindowCenter;
+- (void)saveWindowCenter;
+- (struct CGPoint)lastWindowCenter;
+- (void)cleanupWindows:(BOOL)arg1;
+- (BOOL)newWindowRequiredForRotation;
+//- (void)sendIndigoHIDData:(CDStruct_fd7200cf *)arg1;
+//- (void)sendPurpleEvent:(struct _PurpleEventMessage *)arg1;
+- (void)sendOpenURLEvent:(id)arg1;
+- (void)sendPreferencesChangedEvent;
+- (void)windowScaleChanged:(id)arg1;
+- (void)openSyslog:(id)arg1;
+- (void)showMotionControl:(id)arg1;
+- (void)windowChromeOverrideChanged:(id)arg1;
+- (void)recreateWindow;
+- (void)windowStayInFrontChanged:(id)arg1;
+- (void)showProgrammingGuide:(id)arg1;
+- (id)pathToXcode;
+- (void)customLocationCancel:(id)arg1;
+- (void)customLocationOK:(id)arg1;
+- (void)controlTextDidChange:(id)arg1;
+- (void)triggerCloudSync:(id)arg1;
+- (void)customLocationChanged:(id)arg1;
+- (void)toggleCADebugFlag:(id)arg1;
+- (void)toggleSlowMotion:(id)arg1;
+- (void)toggleKeyboardSync:(id)arg1;
+- (void)toggleHardwareKeyboard:(id)arg1;
+- (void)toggleInCallStatusBar:(id)arg1;
+- (void)simulateMemoryWarning:(id)arg1;
+- (void)toggleRingerSwitch:(id)arg1;
+- (void)shakeDevice:(id)arg1;
+- (void)lockButtonPressed:(id)arg1;
+- (void)homeButtonPressHold:(id)arg1;
+- (void)homeButtonPressed:(id)arg1;
+- (void)homeButtonUp:(id)arg1;
+- (void)homeButtonDown:(id)arg1;
+- (void)tvOutModeChanged:(id)arg1;
+- (void)tvOutModeChangedTo:(int)arg1;
+- (void)resetTvOutSimulatorViewController;
+- (void)simulateDevice:(id)arg1;
+- (void)updateWindow;
+- (void)menuExtraChanged:(id)arg1;
+- (void)animateToRotation:(id)arg1;
+- (void)toggleRotationRight:(id)arg1;
+- (void)toggleRotationLeft:(id)arg1;
+- (void)copyScreen:(id)arg1;
+- (void)pasteText:(id)arg1;
+- (void)paste:(id)arg1;
+- (void)copy:(id)arg1;
+- (void)saveScreenShot:(id)arg1;
+- (void)openPrinterSimulator:(id)arg1;
+- (int)orientation;
+- (void)setNonFullsizeRotation;
+- (void)revalidateDevicesMenu;
+- (BOOL)validateMenuItem:(id)arg1;
+- (BOOL)monitorScaleMatches:(double)arg1;
+- (void)resetContentSheetDidEnd:(id)arg1 returnCode:(long long)arg2 contextInfo:(void *)arg3;
+- (void)resetContent:(id)arg1;
+- (void)dealloc;
+- (void)tvOutClear;
+- (void)application:(id)arg1 openFiles:(id)arg2;
+- (unsigned long long)applicationShouldTerminate:(id)arg1;
+- (BOOL)applicationShouldHandleReopen:(id)arg1 hasVisibleWindows:(BOOL)arg2;
+- (void)establishConnection:(id)arg1;
+- (void)awakeFromNib;
+- (void)simulatorFatalErrorSheetDidEnd:(id)arg1 returnCode:(int)arg2 contextInfo:(void *)arg3;
+- (void)springBoardDidExit;
+- (void)springBoardDidLaunch;
+- (void)springBoardWillLaunch;
+- (void)simulatorViewNeedsDisplayOnMainThread:(id)arg1;
+- (struct CGRect)tvOutWindowFrame;
+- (struct CGRect)tvOutContentFrame;
+- (struct CGSize)frameSize;
+- (struct CGSize)frameSizeWithChrome:(BOOL)arg1 scaledForMonitor:(BOOL)arg2;
+- (struct CGPoint)homeOrigin;
+- (id)homeImage;
+- (id)chromeImage;
+- (float)deviceWindowAdditionalDpiScale;
+- (double)displayScale;
+- (BOOL)hidpiDrawing;
+- (BOOL)doubledFrame;
+- (BOOL)hidpiMacMonitor;
+- (void)fixupGlassWindow;
+- (void)fitDeviceWindow;
+- (id)deviceWindowScreen;
+- (int)desiredDeviceWindowType:(int)arg1;
+- (double)scrollerSize;
+- (void)openURLInMobileSafari:(id)arg1;
+
+@end

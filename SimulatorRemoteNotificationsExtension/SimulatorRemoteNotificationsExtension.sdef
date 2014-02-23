@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="SimulatorRemoteNotifications Terminology">
+    <suite name="SimulatorRemoteNotifications Suite" code="SRNE" description="SimulatorRemoteNotifications Injector commands">
+        <command name="init SimulatorRemoteNotifications" code="SRNEinit" description="Install SimulatorRemoteNotificationsExtension into the iOS Simulator process"/>
+    </suite>
+</dictionary>
