@@ -2,7 +2,7 @@
 
 SimulatorRemoteNotifications is an iOS library to send mock remote notifications to the iOS simulator.
 
-The library extends _UIApplication_ by embedding a mini server that listen for udp packets containing JSON-formated payload.
+The library extends _UIApplication_ by embedding a mini server that listen for UDP packets containing JSON-formated payload. Is also contains a service to send notifications to the mini server, for use in tests.
 
 Note that SimulatorRemoteNotifications does not send notification through Apple's Push Service.
 
@@ -22,48 +22,79 @@ Add a pod entry to your Podfile:
 Install the pod(s) by running:
 
     pod install
+
+### Install the static library
+
+1. Copy the project file in yours
+2. Link your binary with the library, under _Target_ > _Build Phases_ > _Link binary with libraries_ then add the _libSimulatorRemoteNotifications.a_
+3. set `OTHER_LINKER_FLAGS="-ObjC"` for your target
+
     
 ### Install manually
 
 1. clone this repository
 2. add the files in the _SimulatorRemoteNotifications_ directory to your project
-3. set `OTHER_LINKER_FLAGS="-ObjC" for your target
+3. set `OTHER_LINKER_FLAGS="-ObjC"` for your target
 
 
 ## Usage
 
-In your iOS project:
+### Listening for mock remote notifications
 
-1. Add the _SimulatorRemoteNotifications_ directory into your project.
-2. Add `#import "UIApplication+SimulatorRemoteNotifications.h"` to your application delegate.
-3. Add `[application listenForRemoteNotifications];` to _application:didFinishLaunchingWithOptions:_
-4. Implement either _application:didReceiveRemoteNotification:_ or _application:didReceiveRemoteNotification:fetchCompletionHandler:_ (background notification, iOS7)
+First add `#import "UIApplication+SimulatorRemoteNotifications.h"` to your application delegate.
 
+Then implement either _application:didReceiveRemoteNotification:_ or _application:didReceiveRemoteNotification:fetchCompletionHandler:_ (background notification, iOS7).
 
-When called, _application:didRegisterForRemoteNotificationsWithDeviceToken:_ receives a token in the following format instead of random characters:
+Finally call start listening for mock remote notifications:
+
+	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	simulator-remote-notification=IP:PORT
+    	...
+
+		#if DEBUG
+			[application listenForRemoteNotifications];
+		#endif
+	
+    	return YES;
+	}
+
+When _listenForRemoteNotifications_ is called, _application:didRegisterForRemoteNotificationsWithDeviceToken:_ receives a token in the following format instead of random characters: `simulator-remote-notification=IP:PORT`
+
+The default port number is 9930. If you want to change the port, use _setRemoteNotificationsPort_ before calling _listenForRemoteNotifications_:
+
+	application.remoteNotificationsPort = 1234;
+
+Now, to send a remote notification, send an udp packet to localhost:9930.
+
+Note that if you send a notification while the app is in the background, _application:didReceiveRemoteNotification:fetchCompletionHandler:_ will only be called when you bring the app to the foreground.
 
 
-The default port number is 9930. If you want to change the port, use:
+### Sending a mock remote notification from the command line
 
-	[application setRemoteNotificationsPort:1234];
-
-
-To send a remote notification, send an udp packet to localhost:9930.
-You can do this from the terminal by using netcat:
+You can send mock remote notifications from the terminal by using netcat:
 
 	echo -n '{"message":"message"}' | nc -4u -w1 localhost 9930
 
-Note that if you send a notification while the app is in the background, _application:didReceiveRemoteNotification:fetchCompletionHandler:_ will only be called when you bring the app to the foreground.
+### Sending a mock remote notification in tests
+
+First add `#import "ACSimulatorRemoteNotificationsService.h"` to your test
+
+Send you notification with 
+
+	[[ACSimulatorRemoteNotificationsService sharedService] send:@{@"message":@"message"}];
+	
+You can change the host (default: 127.0.0.1) and port (default: 9930) with 
+
+	[[ACSimulatorRemoteNotificationsService sharedService] setRemoteNotificationsPort:1234];
+	[[ACSimulatorRemoteNotificationsService sharedService] setRemoteNotificationsHost:@"10.0.0.1"];
 
 	
 ## Examples
 
-You can look at _SimulatorRemoteNotificationsExample.xcodeproj_ for examples. It contains two targets, where:
+You can look at _SimulatorRemoteNotifications.xcodeproj_ for examples:
 
-- _SimulatorRemoteNotificationsExample_, application:didReceiveRemoteNotification: is called
-- _SimulatorRemoteNotificationsBackgroundExample_, application:didReceiveRemoteNotification:fetchCompletionHandler: is called
+- in _SimulatorRemoteNotificationsExample_, the _application:didReceiveRemoteNotification:_ method is called
+- in _SimulatorRemoteNotificationsBackgroundExample_, the _application:didReceiveRemoteNotification:fetchCompletionHandler:_ method is called
 
 ## Documentation
 
