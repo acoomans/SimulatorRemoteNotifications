@@ -463,7 +463,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotificationsExample" */;
+			buildConfigurationList = 515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotifications" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -986,7 +986,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotificationsExample" */ = {
+		515184B516CC71AC007E471F /* Build configuration list for PBXProject "SimulatorRemoteNotifications" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515184EC16CC71AC007E471F /* Debug */,
@@ -1029,6 +1029,7 @@
 				5186E8D318B9A086007CA8E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		518829AC182AD38F00EF0ADB /* Build configuration list for PBXNativeTarget "SimulatorRemoteNotificationsBackgroundExample" */ = {
 			isa = XCConfigurationList;
