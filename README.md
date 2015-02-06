@@ -20,7 +20,7 @@ Note that SimulatorRemoteNotifications does not send notification through Apple'
 
 Add a pod entry to your Podfile:
 
-    pod 'SimulatorRemoteNotifications', '~> 0.0.2'
+    pod 'SimulatorRemoteNotifications', '~> 0.0.3'
 
 Install the pod(s) by running:
 
