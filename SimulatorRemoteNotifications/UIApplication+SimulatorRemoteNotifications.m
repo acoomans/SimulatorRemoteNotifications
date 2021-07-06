@@ -22,7 +22,7 @@
  * udp max length is 65,507 bytes
  * apns max length is 256 bytes
  */
-static const NSInteger SimulatorRemoteNotificationsBufferLength = 512;
+static const NSInteger SimulatorRemoteNotificationsBufferLength = 4096;
 static const NSInteger SimulatorRemoteNotificationsDefaultPort = 9930;
 
 
