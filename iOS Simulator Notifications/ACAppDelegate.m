@@ -13,6 +13,10 @@
 
 static NSString * const ACAppDelegatePayloadUserDefaultsKey = @"ACAppDelegatePayloadUserDefaultsKey";
 
+@interface ACAppDelegate ()<NSTextViewDelegate>
+@property (strong,nonatomic) NSDictionary * payload;
+@end
+
 @implementation ACAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -25,6 +29,35 @@ static NSString * const ACAppDelegatePayloadUserDefaultsKey = @"ACAppDelegatePay
         if (data) {
             self.payloadTextView.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         }
+    }
+    
+    _payloadTextView.delegate = self;
+    _payloadTextView.richText = NO;
+}
+
+#pragma mark - NSTextDelegate
+
+- (void)textDidChange:(NSNotification *)notification
+{
+    [self updateUI];
+}
+
+- (void) updateUI
+{
+    NSError *error;
+    
+    NSData *data = [self.payloadTextView.string dataUsingEncoding:NSUTF8StringEncoding];
+    _payload = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    if (!_payload || ![_payload isKindOfClass:NSDictionary.class]) {
+        if(error){
+            self.errorTextField.stringValue = [NSString stringWithFormat:@"Invalid JSON : %@", error.localizedDescription];
+        }else{
+            self.errorTextField.stringValue = @"Invalid JSON : Not a dictionnary";
+        }
+        self.errorTextField.hidden = NO;
+    }else{
+        self.errorTextField.hidden = YES;
     }
 }
 
@@ -45,36 +78,15 @@ static NSString * const ACAppDelegatePayloadUserDefaultsKey = @"ACAppDelegatePay
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
     self.payloadTextView.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [self updateUI];
 }
 
-- (IBAction)sendAction:(id)sender {
+- (IBAction)sendAction:(id)sender
+{
+    if(!self.errorTextField.isHidden) return;
     
-    self.errorTextField.hidden = YES;
-    
-    NSError *error;
-    
-    NSData *data = [self.payloadTextView.string dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *payload = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    
-    if (!payload) {
-        self.errorTextField.stringValue = [NSString stringWithFormat:@"Invalid JSON: %@", error.localizedFailureReason];
-        self.errorTextField.hidden = NO;
-        return;
-    }
-    
-    if (![payload isKindOfClass:NSDictionary.class]) {
-        self.errorTextField.stringValue = @"Invalid JSON: Not a dictionary";
-        self.errorTextField.hidden = NO;
-        return;
-    }
-    
-    // reformat payload
-    data = [NSJSONSerialization dataWithJSONObject:payload options:NSJSONWritingPrettyPrinted error:&error];
-    self.payloadTextView.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    [[ACSimulatorRemoteNotificationsService sharedService] send:payload];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:payload forKey:ACAppDelegatePayloadUserDefaultsKey];
+    [[ACSimulatorRemoteNotificationsService sharedService] send:_payload];
+    [[NSUserDefaults standardUserDefaults] setObject:_payload forKey:ACAppDelegatePayloadUserDefaultsKey];
 }
 
 @end
