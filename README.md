@@ -9,9 +9,8 @@ This project includes the _iOS Simulator Notifications_ MacOSX app to help you s
 
 Note that SimulatorRemoteNotifications does not send notification through Apple's Push Service.
 
-[![Build Status](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.png)
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/SimulatorRemoteNotifications/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASimulatorRemoteNotifications%2A)
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/p/SimulatorRemoteNotifications/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASimulatorRemoteNotifications%2A)
+[![Build Status](https://api.travis-ci.org/acoomans/SimulatorRemoteNotifications.svg)](https://travis-ci.org/acoomans/SimulatorRemoteNotifications)
+[![Cocoapods](https://img.shields.io/cocoapods/v/SimulatorRemoteNotifications.svg)](https://cocoapods.org/?q=SimulatorRemoteNotifications)
 
 
 ## Install
