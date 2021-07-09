@@ -26,6 +26,8 @@ static NSString * const ACAppDelegatePayloadUserDefaultsKey = @"ACAppDelegatePay
             self.payloadTextView.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         }
     }
+    
+    self.payloadTextView.automaticQuoteSubstitutionEnabled = NO;
 }
 
 #pragma mark - Actions
